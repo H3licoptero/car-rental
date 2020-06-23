@@ -1,3 +1,31 @@
+@font-face {
+  font-family: "Open Sans";
+  src: url("../fonts/OpenSans-Regular.woff") format("woff"), url("../fonts/OpenSans-Regular.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap; }
+
+@font-face {
+  font-family: "Open Sans";
+  src: url("../fonts/OpenSans-bold.woff") format("woff"), url("../fonts/OpenSans-bold.woff2") format("woff2");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap; }
+
+@font-face {
+  font-family: "IstokWeb";
+  src: url("../fonts/IstokWeb-Regular.woff") format("woff"), url("../fonts/IstokWeb-Regular.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap; }
+
+@font-face {
+  font-family: "IstokWeb";
+  src: url("../fonts/IstokWeb-bold.woff") format("woff"), url("../fonts/IstokWeb-bold.woff2") format("woff2");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap; }
+
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
@@ -305,4 +333,6 @@ template {
   display: none; }
 
 h1 {
-  color: blue; }
+  color: blue;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 600; }

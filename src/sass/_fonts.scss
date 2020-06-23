@@ -1,0 +1,39 @@
+@font-face {
+  font-family: "Open Sans";
+  src: 
+  url("../fonts/OpenSans-Regular.woff") format("woff"),
+      url("../fonts/OpenSans-Regular.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Open Sans";
+  src:
+    url("../fonts/OpenSans-bold.woff") format("woff"),
+    url("../fonts/OpenSans-bold.woff2") format("woff2");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "IstokWeb";
+  src:
+    url("../fonts/IstokWeb-Regular.woff") format("woff"),
+    url("../fonts/IstokWeb-Regular.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "IstokWeb";
+  src:
+    url("../fonts/IstokWeb-bold.woff") format("woff"),
+    url("../fonts/IstokWeb-bold.woff2") format("woff2");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
