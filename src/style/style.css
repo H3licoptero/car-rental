@@ -332,7 +332,73 @@ template {
 [hidden] {
   display: none; }
 
-h1 {
-  color: blue;
-  font-family: "Istok Web", sans-serif;
-  font-weight: 400; }
+.container {
+  max-width: 1240px;
+  width: 90%;
+  margin: auto; }
+
+*, *:before, *:after {
+  box-sizing: border-box; }
+
+html {
+  font-size: 14px; }
+
+body {
+  font-family: "Open Sans", sans-serif;
+  font-size: 1rem;
+  font-weight: normal; }
+
+img {
+  max-width: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+  -o-object-position: center;
+  object-position: center; }
+
+a {
+  text-decoration: none; }
+
+.header {
+  position: relative;
+  display: flex; }
+
+.menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 6.142857rem; }
+  .menu__logo {
+    margin-right: 1.571428rem; }
+  .menu__logo-wrapper {
+    display: flex; }
+  .menu__logo-text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    font-family: "Istok Web",sans-serif;
+    font-size: 2.571428rem;
+    font-weight: bold;
+    line-height: 1.33;
+    color: #ffffff; }
+  .menu__nav {
+    align-items: center; }
+
+.logo__text--primary {
+  font-size: 1.1428571rem;
+  color: #dddddd; }
+
+.nav__item {
+  margin-right: 4.071428rem;
+  font-size: 1.142857rem;
+  font-weight: normal;
+  font-style: normal;
+  line-height: 1.75;
+  color: #dddddd; }
+  .nav__item:last-child {
+    margin-right: 0; }
+  .nav__item:hover {
+    color: #ffffff; }
+
+.hero {
+  background: #222222 url("../img/hero.jpg") no-repeat center/cover;
+  height: 140vh; }
