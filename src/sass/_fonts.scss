@@ -1,8 +1,8 @@
 @font-face {
   font-family: "Open Sans";
   src: 
-  url("../fonts/OpenSans-Regular.woff") format("woff"),
-      url("../fonts/OpenSans-Regular.woff2") format("woff2");
+  url("../fonts/OpenSans/OpenSans-Regular.woff") format("woff"),
+      url("../fonts/OpenSans/OpenSans-Regular.woff2") format("woff2");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -11,28 +11,28 @@
 @font-face {
   font-family: "Open Sans";
   src:
-    url("../fonts/OpenSans-bold.woff") format("woff"),
-    url("../fonts/OpenSans-bold.woff2") format("woff2");
+    url("../fonts/OpenSans/OpenSans-Bold.woff") format("woff"),
+    url("../fonts/OpenSans/OpenSans-Bold.woff2") format("woff2");
   font-weight: bold;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: "IstokWeb";
+  font-family: "Istok Web";
   src:
-    url("../fonts/IstokWeb-Regular.woff") format("woff"),
-    url("../fonts/IstokWeb-Regular.woff2") format("woff2");
+    url("../fonts/IstokWeb/IstokWeb-Regular.woff") format("woff"),
+    url("../fonts/IstokWeb/IstokWeb-Regular.woff2") format("woff2");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: "IstokWeb";
+  font-family: "Istok Web";
   src:
-    url("../fonts/IstokWeb-bold.woff") format("woff"),
-    url("../fonts/IstokWeb-bold.woff2") format("woff2");
+    url("../fonts/IstokWeb/IstokWeb-Bold.woff") format("woff"),
+    url("../fonts/IstokWeb/IstokWeb-Bold.woff2") format("woff2");
   font-weight: bold;
   font-style: normal;
   font-display: swap;

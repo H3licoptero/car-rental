@@ -61,8 +61,10 @@ function buildHTML(done) {
 }
 
 function buildFonts(done) {
-  src("src/fonts/**")
-    .pipe(dest("dist/fonts"));
+  src("src/fonts/OpenSans/**")
+    .pipe(dest("dist/fonts/OpenSans"));
+  src("src/fonts/IsokWeb/**")
+    .pipe(dest("dist/fonts/IstokWeb"));
   done();
 }
 
