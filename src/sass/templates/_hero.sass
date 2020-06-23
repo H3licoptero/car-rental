@@ -1,3 +1,128 @@
 .hero
   background: $dark url("../img/hero.jpg") no-repeat center / cover
-  height: 140vh
+  min-height: 120vh
+  &__container
+    display: flex
+    flex-direction: column
+    flex-wrap: wrap
+    width: 31.92857rem
+    margin-left: 21.35714rem
+  &__title
+    width: 446px
+    margin-top: 0
+    margin-bottom: 2.21428rem
+    font-family: "Istok Web"
+    font-size: 84px
+    font-weight: bold
+    font-stretch: normal
+    font-style: normal
+    line-height: 1
+    letter-spacing: -3.36px
+    color: $light
+  &__text
+    margin-top: 0
+    max-width: 269px
+    font-size: 1.714285rem
+    line-height: 1.5
+    color: $primary
+.header
+  position: relative
+  display: flex
+.menu
+  display: flex
+  justify-content: space-between
+  align-items: center
+  margin-top: 6.142857rem
+  margin-bottom: 3.7857142rem 
+  &__logo
+    margin-right: 1.571428rem
+  &__logo-wrapper
+    display: flex
+  &__logo-text
+    display: flex
+    flex-direction: column
+    align-items: flex-start
+    align-self: flex-start
+    font-family: "Istok Web",sans-serif
+    font-size: 2.571428rem
+    font-weight: bold
+    line-height: 1.33
+    color: $light
+  &__nav
+    align-items: center
+.logo
+  &__text--primary
+    font-family: "Open Sans"
+    font-weight: normal
+    font-size: 1.1428571rem
+    color: $primary
+  &__header-image
+    max-width: 4.857142rem
+    height: 100%
+.nav
+  &__item
+    margin-right: 4.071428rem
+    font-size: 1.142857rem
+    font-weight: normal
+    font-style: normal
+    line-height: 1.75
+    color: $primary
+    &:last-child
+      margin-right: 0
+    &:hover
+      color: $light
+.video
+  &__content
+    position: relative
+    max-width: 64.28573rem
+    width: 100%
+    height: 36.14285rem
+    margin: auto
+    bottom: -13rem
+    background-image: url('../img/video-img.png')
+    background-position: center
+    background-repeat: no-repeat
+    background-color: $light
+    &::before
+      content: ""
+      position: absolute
+      top: 0
+      left: -49px
+      width: 112% 
+      height: 100%
+      background: url('../img/video-before.png') 
+      opacity: 0.8
+      background-repeat: no-repeat
+  &__title
+    font-family: "Istok Web"
+    font-weight: bold
+    line-height: 1.33
+    font-size: 2.571428rem
+  &__text
+    font-family: "Open Sans", sans-serif
+    color: $primary
+  &__play
+    position: absolute
+    display: flex
+    justify-content: center
+    align-items: center
+    margin: auto
+    width: 100%
+    height: 100%
+  &__text-wrap
+    position: absolute
+    margin-top: 0
+    top: 91px
+    left: -105px 
+    z-index: 111
+  &__btn 
+    position: relative
+    width: 54px
+    height: 54px
+    cursor: pointer
+  &__image-box
+    display: flex
+    border: solid 1px rgba($primary, 0.24)
+    border-radius: 50%
+    padding: 18px
+    color: $primary
