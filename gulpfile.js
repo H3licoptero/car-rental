@@ -22,7 +22,7 @@ function bs() {
 }
 
 function serveSass() {
-  return src("src/sass/*.sass", "src/sass/**/*.scss")
+  return src("src/sass/**/*.sass", "src/sass/**/*.scss")
     .pipe(sass())
     .pipe(
       autoprefixer({
