@@ -1,6 +1,6 @@
 $(document).ready(function () {
   "use strict"; 
-  let mySwiper = new Swiper(".swiper-container", {
+  let mySwiper = new Swiper(".swiper-container-first", {
     // Optional parameters
     loop: true,
     width: 306,
@@ -11,12 +11,20 @@ $(document).ready(function () {
     },
     // slidesPerView: 2,
   });
-
-  // let prev = $(".swiper-button-prev");
-  // let next = $(".swiper-button-next");
-
-  // next.css("left", prev.width() + 13);
-  // bullets.css("left", prev.width() + 25);
-  // // bullets.css("top", bullets.height() - 40);
-
+  let mySwiperSecond = new Swiper(".swiper-container-second", {
+    // Optional parameters
+    loop: true,
+    width: 706,
+    spaceBetween: 15,
+    navigation: {
+      prevEl: ".swiper-button-prev_second",
+      nextEl: ".swiper-button-next_second",
+    },
+    pagination: {
+      el: ".swiper-pagination",
+      type: "fraction",
+    },
+    slidesPerView: 1,
+    centeredSlides: true,
+  });
 });

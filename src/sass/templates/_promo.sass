@@ -1,0 +1,126 @@
+.promo
+  background-color: $secondary
+  &__section
+    display: flex
+  &__content
+    margin-top: 198px
+    margin-bottom: 190px
+    display: flex
+    flex-direction: row
+    flex-basis: 45%
+    justify-content: space-around
+.about
+  &__block
+    display: flex
+    flex-direction: column
+    max-width: 304px
+.swiper
+  &-container-second
+    display: flex
+    max-width: 702px
+    width: 100%
+    overflow: hidden
+  &-slide-second
+    display: flex
+    flex-direction: column
+    flex-wrap: wrap
+    justify-content: center
+    max-width: 702px
+    &-active
+      display: flex
+      width: 100%
+  &-button-prev_second
+    position: absolute
+    content: ""
+    height: 60px
+    width: 60px
+    left: -50px
+    top: 150px
+    // margin-top: 56px
+    background: url("../img/next-button.svg") no-repeat center
+    transform: rotate(180deg)
+    background-size: 100%
+    outline: none
+    z-index: 2
+    cursor: pointer
+    &::after
+      display: none 
+  &-button-next_second
+    position: absolute
+    content: ""
+    height: 60px
+    width: 60px
+    right: auto
+    top: 150px
+    left: 690px
+    background: url("../img/next-button.svg") no-repeat center
+    background-size: 100%
+    outline: none
+    z-index: 2
+    cursor: pointer
+    &::after
+      display: none 
+  &-pagination-fraction
+    bottom: -80px
+    left: -160px
+  &-pagination-current
+    margin-right: 46px
+    font-size: 24px
+    font-weight: bold
+    line-height: 1.5
+    letter-spacing: -0.96px
+    color: $dark
+  &-pagination-total
+    margin-left: 20px 
+    font-size: 13px
+    font-weight: bold
+    line-height: 1.85
+    letter-spacing: normal
+    color: $grey
+.block
+  &__more
+    margin-right: 6rem
+    max-width: 702px
+.more
+  &__wrapper
+    display: flex
+    flex-direction: column
+    width: 100%
+    height: 100%
+  &__promo
+    // width: 100%
+    max-width: 702px
+    height: 100%
+    border-radius: 3px
+.about
+  &__block
+    display: flex
+    flex-direction: column
+  &__title
+    margin-bottom: 6rem
+    font-family: $istok
+    font-size: 2.571428rem
+    font-weight: bold
+    line-height: 1.33
+    letter-spacing: -1.44px
+    color: $dark
+  &__subtitle
+    margin-bottom: 3.571428rem
+    font-size: 1.7142857rem
+    font-weight: bold
+    line-height: 1.5
+    letter-spacing: normal
+    color: $dark
+  &__text
+    margin: 0
+    margin-bottom: 22px
+    font-size: 1rem
+    font-weight: bold
+    line-height: 1.75
+    // letter-spacing: 0.24px
+    color: $ligther-dark
+  &__condition
+    font-size: 0.928571rem
+    line-height: 1.85
+    color: $grey
+
