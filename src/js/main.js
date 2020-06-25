@@ -27,5 +27,21 @@ $(document).ready(function () {
     slidesPerView: 1,
     centeredSlides: true,
   });
+  let mySwiperThird = new Swiper(".swiper-container-third", {
+    // Optional parameters
+    loop: true,
+    width: 256,
+    spaceBetween: 185,
+    navigation: {
+      prevEl: ".swiper-button-prev_third",
+      nextEl: ".swiper-button-next_third",
+    },
+    pagination: {
+      el: ".swiper-pagination",
+      type: "fraction",
+    },
+    slidesPerView: 1,
+    centeredSlides: true,
+  });
   
 });

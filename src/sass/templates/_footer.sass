@@ -1,0 +1,202 @@
+.footer
+  background-color: $dark
+  &__container
+    border-top: 1px solid $grey
+  &__dark
+    display: flex
+    margin-top: 14.285714rem
+  &__title-box
+    display: flex
+    max-width: 198px
+    margin-right: 14.085714rem
+  &__title
+    font-family: $istok
+    font-weight: bold
+    font-size: 2.571428rem
+    line-height: 1.33
+    letter-spacing: -1.44px
+  &__form-block 
+    margin-right: 7.028571rem
+  &__price
+    margin-right: 40px
+    font-family: $istok 
+    font-weight: bold
+    font-size: 6.14285rem
+    color: $light
+  &__form-block
+    max-width: 21.857142rem
+    width: 100%
+    margin-bottom: 8rem
+  &__form
+    display: flex
+    flex-direction: column
+    justify-content: center
+    outline: none
+    margin-bottom: 1.9285rem
+  &__button
+    margin-bottom: 
+    padding: 13px 110px
+    font-family: $istok
+    font-size: 1.14285rem
+    font-weight: bold
+    line-height: 1.75
+    letter-spacing: 0.64px
+    color: $light
+    background-color: $orange
+    border: none
+    border-radius: 3px
+    text-transform: uppercase
+    cursor: pointer
+  &__promocode
+    display: flex
+    justify-content: center
+    font-family: $sans
+    font-size: 0.92857rem
+    font-weight: normal
+    line-height: 1.8
+    color: $grey
+  &__props
+    margin-right: 11.42857rem
+    margin-bottom: 113px
+  &__contacts
+    margin-right: 10.0714rem
+.currency
+  top: -48px
+  font-family: $sans
+  font-size: 1.714285rem
+  font-weight: bold
+  line-height: 1.5
+  color: $grey
+.discount
+  display: flex
+  flex-direction: row
+  margin-left: 5px
+  font-family: $sans  
+  font-size: 24px
+  font-weight: bold
+  line-height: 1.5
+  color: $change
+.select
+  // position: relative
+  padding: 20px 
+  padding-right: 10px
+  font-size: 1.71428rem
+  line-height: 1.5
+  background-color: $dark
+  border: solid 1px $ligther-dark
+  border-radius: 3px
+  color: $light
+  appearance: none
+  background: url('../img/arrow-down.png') no-repeat right
+  background-position: 270px 
+  outline: none
+  &::after
+    // position: absolute
+    content: "-20%"
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    color: $grey
+  &__span
+    font-size: 16px
+.form
+  &__select 
+    margin-bottom: 45px 
+  &__input  
+    margin-bottom: 3.2142rem
+    padding: 10px 0
+    font-family: $sans
+    font-size: 1.14285rem
+    background-color: $dark
+    border: none
+    border-bottom: 1px solid $ligther-dark
+    line-height: 1.75
+    color: $light
+    outline: none
+    &::placeholder
+      color: $light
+.details
+  &__container
+    display: flex
+    // margin-bottom: 113px
+  &__title
+    margin-bottom: 3.78571rem
+    font-family: $sans
+    font-size: 1.142857rem
+    font-weight: bold
+    line-height: 1.75
+    color: $light
+.props
+  &__list   
+    padding-left: 0
+  &__item
+    padding-left: 0
+    margin-bottom: 7px
+    font-family: $sans
+    font-size: 0.92857rem
+    line-height: 1.85
+    color: $grey
+    &:last-child
+      margin-bottom: 0
+  &__link
+    color: $grey
+.swiper
+  &-container-third
+    position: relative
+    max-width: 256px
+    width: 100%
+    overflow: hidden
+  &-button-prev_third
+    position: absolute
+    height: 12px
+    width: 12px
+    left: 0
+    top: 0
+    // margin-top: 56px
+    background: url("../img/slider-button-prev.svg") no-repeat center
+    outline: none
+    z-index: 2
+    cursor: pointer
+    &::after
+      display: none
+  &-button-next_third
+    position: absolute
+    height: 12px
+    width: 12px
+    right: 6px
+    top: 0
+    // margin-top: 56px
+    background: url("../img/slider-button-prev.svg") no-repeat center
+    transform: rotate(180deg)
+    outline: none
+    z-index: 2
+    cursor: pointer
+    &::after
+      display: none
+  &-buttons-box
+    // position: absolute
+    left: 260px
+    top: 0
+    z-index: 2
+.slide-third
+  max-width: 256px
+  // width: 100%
+  font-size: 1.0842857rem
+  line-height: 1.75
+  font-weight: bold
+  color: $light
+.slider
+  &-question  
+    margin-top: 0
+    margin-bottom: 43px
+  &-response
+    margin-top: 0
+    margin-bottom: 0
+    font-size: 0.95rem
+    font-weight: normal
+    color: $grey
+  &-span
+    color: $light
+
+    
