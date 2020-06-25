@@ -14,8 +14,8 @@ $(document).ready(function () {
   let mySwiperSecond = new Swiper(".swiper-container-second", {
     // Optional parameters
     loop: true,
-    width: 706,
-    spaceBetween: 15,
+    width: 702,
+    spaceBetween: 65,
     navigation: {
       prevEl: ".swiper-button-prev_second",
       nextEl: ".swiper-button-next_second",
@@ -27,4 +27,5 @@ $(document).ready(function () {
     slidesPerView: 1,
     centeredSlides: true,
   });
+  
 });
