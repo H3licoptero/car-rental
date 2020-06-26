@@ -4,7 +4,7 @@ $(document).ready(function () {
     // Optional parameters
     loop: true,
     width: 306,
-    spaceBetween: 65,
+    spaceBetween: 90,
     navigation: {
       prevEl: ".swiper-button-prev",
       nextEl: ".swiper-button-next",
