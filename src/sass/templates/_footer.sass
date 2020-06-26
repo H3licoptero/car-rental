@@ -56,10 +56,15 @@
     line-height: 1.8
     color: $grey
   &__props
-    margin-right: 11.42857rem
+    margin-right: 9.42857rem
     margin-bottom: 113px
   &__contacts
     margin-right: 10.0714rem
+  &__questions 
+    padding: 20px 35px
+    width: 535px
+    background-image: url("../img/border-3.png")
+    background-repeat: no-repeat
 .currency
   top: -48px
   font-family: $sans
@@ -77,10 +82,10 @@
   line-height: 1.5
   color: $change
 .select
-  // position: relative
   padding: 20px 
   padding-right: 10px
   font-size: 1.71428rem
+  font-weight: bold
   line-height: 1.5
   background-color: $dark
   border: solid 1px $ligther-dark
@@ -119,7 +124,7 @@
 .details
   &__container
     display: flex
-    // margin-bottom: 113px
+    justify-content: space-between
   &__title
     margin-bottom: 3.78571rem
     font-family: $sans
@@ -141,6 +146,10 @@
       margin-bottom: 0
   &__link
     color: $grey
+.questions
+  &__wrapper
+    position: relative
+    width: 469px
 .swiper
   &-container-third
     position: relative
@@ -153,10 +162,9 @@
     width: 12px
     left: 0
     top: 0
-    // margin-top: 56px
     background: url("../img/slider-button-prev.svg") no-repeat center
     outline: none
-    z-index: 2
+    // z-index: 2
     cursor: pointer
     &::after
       display: none
@@ -164,24 +172,53 @@
     position: absolute
     height: 12px
     width: 12px
-    right: 6px
+    left: 50px
     top: 0
-    // margin-top: 56px
     background: url("../img/slider-button-prev.svg") no-repeat center
     transform: rotate(180deg)
     outline: none
-    z-index: 2
+    // z-index: 2
     cursor: pointer
     &::after
       display: none
   &-buttons-box
-    // position: absolute
-    left: 260px
-    top: 0
+    position: absolute
+    left: 370px
+    top: 123px
     z-index: 2
+    color: $light
+.pagination-third
+  position: relative
+  display: flex
+  top: -115px
+  bottom: 0
+  left: -9px
+  right: 0
+  color: $light
+.current-third
+  position: absolute
+  top: -8px
+  left: 45px
+  font-size: 24px
+  font-weight: bold
+  line-height: 1.5
+  letter-spacing: -0.96px
+  color: $light
+  &::before
+    content: '0'
+.total-third
+  position: absolute
+  top: -6px
+  right: 25px
+  font-size: 13px
+  font-weight: bold
+  line-height: 1.85
+  letter-spacing: normal
+  color: $grey
+  &::before
+    content: '0'
 .slide-third
   max-width: 256px
-  // width: 100%
   font-size: 1.0842857rem
   line-height: 1.75
   font-weight: bold
@@ -198,5 +235,30 @@
     color: $grey
   &-span
     color: $light
+.socials
+  display: flex
+  flex-wrap: wrap
+  &__container    
+    display: flex
+    justify-content: space-between
+    align-items: flex-end
+    margin-bottom: 81px
+  &__social-box   
+    display: flex
+    cursor: pointer
+    margin-right: 0
+  &__icon-box 
+    max-width: 23px
+    &:hover
+      fill: $change
+      color: $change
+.rights
+  &__message 
+    font-size: 0.928571rem
+    line-height: 1.85  
+    color: $ligther-dark
+.vk-icon
+  fill: $grey
+  stroke: $grey
 
     

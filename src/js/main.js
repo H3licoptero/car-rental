@@ -11,6 +11,7 @@ $(document).ready(function () {
     },
     // slidesPerView: 2,
   });
+  
   let mySwiperSecond = new Swiper(".swiper-container-second", {
     // Optional parameters
     loop: true,
@@ -21,12 +22,15 @@ $(document).ready(function () {
       nextEl: ".swiper-button-next_second",
     },
     pagination: {
-      el: ".swiper-pagination",
+      el: ".pagination-second",
       type: "fraction",
+      currentClass: "current-second",
+      totalClass: "total-second",
     },
     slidesPerView: 1,
     centeredSlides: true,
   });
+
   let mySwiperThird = new Swiper(".swiper-container-third", {
     // Optional parameters
     loop: true,
@@ -37,8 +41,10 @@ $(document).ready(function () {
       nextEl: ".swiper-button-next_third",
     },
     pagination: {
-      el: ".swiper-pagination",
+      el: ".pagination-third",
       type: "fraction",
+      currentClass: "current-third",
+      totalClass: "total-third",
     },
     slidesPerView: 1,
     centeredSlides: true,

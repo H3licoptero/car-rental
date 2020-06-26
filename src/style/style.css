@@ -766,24 +766,27 @@ ul > li {
   bottom: -80px;
   left: -160px; }
 
-.swiper-pagination-current {
+.pagination-second {
+  color: #222222; }
+
+.current-second {
   margin-right: 46px;
   font-size: 24px;
   font-weight: bold;
   line-height: 1.5;
   letter-spacing: -0.96px;
   color: #222222; }
-  .swiper-pagination-current::before {
+  .current-second::before {
     content: '0'; }
 
-.swiper-pagination-total {
+.total-second {
   margin-left: 20px;
   font-size: 13px;
   font-weight: bold;
   line-height: 1.85;
   letter-spacing: normal;
   color: #777777; }
-  .swiper-pagination-total::before {
+  .total-second::before {
     content: '0'; }
 
 .slide-second {
@@ -852,11 +855,13 @@ ul > li {
     background-image: url("../img/hero.jpg");
     background-size: cover;
     background-repeat: no-repeat;
-    opacity: 0.05; }
+    opacity: 0.05;
+    z-index: 0; }
   .info__container {
     display: flex;
     margin-top: 14.35714rem;
-    margin-bottom: 14.14285rem; }
+    margin-bottom: 14.14285rem;
+    z-index: 1; }
   .info__title {
     font-size: 6rem;
     margin: 0;
@@ -1095,10 +1100,15 @@ ul > li {
     line-height: 1.8;
     color: #777777; }
   .footer__props {
-    margin-right: 11.42857rem;
+    margin-right: 9.42857rem;
     margin-bottom: 113px; }
   .footer__contacts {
     margin-right: 10.0714rem; }
+  .footer__questions {
+    padding: 20px 35px;
+    width: 535px;
+    background-image: url("../img/border-3.png");
+    background-repeat: no-repeat; }
 
 .currency {
   top: -48px;
@@ -1122,6 +1132,7 @@ ul > li {
   padding: 20px;
   padding-right: 10px;
   font-size: 1.71428rem;
+  font-weight: bold;
   line-height: 1.5;
   background-color: #222222;
   border: solid 1px #444444;
@@ -1167,7 +1178,8 @@ ul > li {
     color: #ffffff; }
 
 .details__container {
-  display: flex; }
+  display: flex;
+  justify-content: space-between; }
 
 .details__title {
   margin-bottom: 3.78571rem;
@@ -1193,6 +1205,10 @@ ul > li {
 .props__link {
   color: #777777; }
 
+.questions__wrapper {
+  position: relative;
+  width: 469px; }
+
 .swiper-container-third {
   position: relative;
   max-width: 256px;
@@ -1207,7 +1223,6 @@ ul > li {
   top: 0;
   background: url("../img/slider-button-prev.svg") no-repeat center;
   outline: none;
-  z-index: 2;
   cursor: pointer; }
   .swiper-button-prev_third::after {
     display: none; }
@@ -1216,20 +1231,54 @@ ul > li {
   position: absolute;
   height: 12px;
   width: 12px;
-  right: 6px;
+  left: 50px;
   top: 0;
   background: url("../img/slider-button-prev.svg") no-repeat center;
   transform: rotate(180deg);
   outline: none;
-  z-index: 2;
   cursor: pointer; }
   .swiper-button-next_third::after {
     display: none; }
 
 .swiper-buttons-box {
-  left: 260px;
-  top: 0;
-  z-index: 2; }
+  position: absolute;
+  left: 370px;
+  top: 123px;
+  z-index: 2;
+  color: #ffffff; }
+
+.pagination-third {
+  position: relative;
+  display: flex;
+  top: -115px;
+  bottom: 0;
+  left: -9px;
+  right: 0;
+  color: #ffffff; }
+
+.current-third {
+  position: absolute;
+  top: -8px;
+  left: 45px;
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 1.5;
+  letter-spacing: -0.96px;
+  color: #ffffff; }
+  .current-third::before {
+    content: '0'; }
+
+.total-third {
+  position: absolute;
+  top: -6px;
+  right: 25px;
+  font-size: 13px;
+  font-weight: bold;
+  line-height: 1.85;
+  letter-spacing: normal;
+  color: #777777; }
+  .total-third::before {
+    content: '0'; }
 
 .slide-third {
   max-width: 256px;
@@ -1251,3 +1300,30 @@ ul > li {
 
 .slider-span {
   color: #ffffff; }
+
+.socials {
+  display: flex;
+  flex-wrap: wrap; }
+  .socials__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 81px; }
+  .socials__social-box {
+    display: flex;
+    cursor: pointer;
+    margin-right: 0; }
+  .socials__icon-box {
+    max-width: 23px; }
+    .socials__icon-box:hover {
+      fill: #17bebb;
+      color: #17bebb; }
+
+.rights__message {
+  font-size: 0.928571rem;
+  line-height: 1.85;
+  color: #444444; }
+
+.vk-icon {
+  fill: #777777;
+  stroke: #777777; }
