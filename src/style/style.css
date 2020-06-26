@@ -875,7 +875,7 @@ ul > li {
   .info__title {
     font-size: 6rem;
     margin: 0;
-    margin-bottom: 2.5rem; }
+    margin-bottom: 0.5rem; }
   .info__subtitle {
     font-size: 1.714285rem;
     font-weight: normal;
@@ -891,7 +891,7 @@ ul > li {
     color: #ffffff; }
 
 .wrap-first__box-title {
-  margin-bottom: 5.9285714rem;
+  margin-bottom: 4.9885714rem;
   text-align: center; }
 
 .complete__wrap-second {
@@ -901,12 +901,13 @@ ul > li {
   display: flex;
   flex-direction: column; }
   .features__transmission {
-    margin-bottom: 45px; }
+    margin-bottom: 2.071428rem; }
 
 .transmission {
   display: flex;
   flex-wrap: nowrap;
-  padding: 35px 57px;
+  padding: 34px 57px;
+  padding-top: 2.8rem;
   background-image: url("../img/border-1.png");
   background-repeat: no-repeat;
   background-position: center; }
@@ -929,14 +930,12 @@ ul > li {
     display: flex;
     flex-direction: column;
     width: 100%;
-    margin-top: 46px;
+    margin-top: 2.65rem;
     text-align: right; }
   .transmission__subtitle {
     font-family: "Istok Web", sans-serif;
     font-size: 36px;
     font-weight: bold;
-    line-height: 1.33;
-    text-transform: uppercase;
     color: #ffffff; }
   .transmission__etc {
     font-family: "Open Sans", sans-serif;
@@ -966,8 +965,8 @@ ul > li {
 
 .docs__title {
   margin: 0;
-  margin-right: 3.071428rem;
-  margin-bottom: 3.2857142rem;
+  margin-right: 2.591428rem;
+  margin-bottom: 1.2857142rem;
   font-family: "Istok Web", sans-serif;
   font-size: 6rem;
   font-weight: bold;
@@ -975,6 +974,7 @@ ul > li {
 
 .docs__sup {
   position: relative;
+  top: -4px;
   font-family: "Open Sans", sans-serif;
   font-size: 1.714285rem;
   font-weight: bold;
@@ -987,7 +987,7 @@ ul > li {
     font-weight: normal;
     font-size: 2.37142rem;
     line-height: 1.33;
-    top: 45px;
+    top: 40px;
     color: #777777; }
 
 .docs__list {
@@ -1010,17 +1010,20 @@ ul > li {
 
 .components__picture {
   display: flex;
-  margin-bottom: 7.6rem; }
+  margin-bottom: 6.4rem; }
 
 .components__title {
   letter-spacing: -3.36px;
-  margin-bottom: 3.285714rem; }
+  margin-bottom: 2.3rem; }
 
 .components__subtitle {
+  display: flex;
+  margin-bottom: 1.214285rem;
   font-size: 1.1428571rem;
   line-height: 1.75; }
 
 .components__promo {
+  max-width: 280px;
   margin-bottom: 0;
   line-height: 1.75;
   color: #777777; }
@@ -1031,7 +1034,7 @@ ul > li {
   align-items: center;
   border: 1px solid #777777;
   max-width: 3.857142rem;
-  margin-bottom: 3.071428rem;
+  margin-bottom: 2.3rem;
   padding: 17px;
   border-radius: 50%; }
 
@@ -1139,8 +1142,8 @@ ul > li {
   color: #17bebb; }
 
 .select {
-  padding: 20px;
-  padding-right: 10px;
+  padding: 27px;
+  padding-left: 34px;
   font-size: 1.71428rem;
   font-weight: bold;
   line-height: 1.5;
@@ -1152,9 +1155,10 @@ ul > li {
   -moz-appearance: none;
   appearance: none;
   background: url("../img/arrow-down.png") no-repeat right;
-  background-position: 270px;
+  background-position: 262px;
   outline: none; }
   .select::after {
+    position: absolute;
     content: "-20%";
     top: 0;
     left: 0;
@@ -1163,6 +1167,8 @@ ul > li {
     color: #777777; }
   .select__span {
     font-size: 16px; }
+  .select__value {
+    font-size: 12px; }
 
 .form__select {
   margin-bottom: 45px; }
