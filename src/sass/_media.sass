@@ -61,16 +61,96 @@
   html
     font-size: 12px 
 @media screen and ( max-width: 375px )  
+  // hero
+  .hero
+    &__title
+      max-width: 150px
+      width: 100%
+      font-size: 54px
+      letter-spacing: normal
+  .header
+    &__conatiner
+      max-width: 300px
+      width: 100%
+    &__menu
+      max-width: 300px
+      flex-direction: column
+      margin: auto
+      margin-top: 73px
+      margin-bottom: 15rem
+  .menu
+    &__nav
+      display: none
+  .logo
+    &__header-image
+      width: 5rem
+  .video
+    &__content
+      max-width: 315px
+      height: 175px
+      bottom: -22rem
+      &::before
+        left: -16px
+        background-size: cover 
+    &__text-wrap
+      top: -62px
+      left: -3px
+  // slider section
+  .slider
+    &__container
+      flex-direction: column  
+    &__title  
+      margin-bottom: 4rem
+  .swiper-container-first 
+    max-width: 300px
+  .swiper-slide-first
+    max-width: 288px
+    margin-right: 0 
+  .block__other
+    margin-left: 80px 
+  .swiper-slide-primary
+    max-width: 300px
+  .swiper-button-prev_first
+    left: -12px
+    top: 72px
+  .swiper-button-next_first
+    right: -46px
+    top: 72px
+  // слайдер доделать обязательно 27,06
+  //  reviews
+  .cards
+    &__wrapper
+      flex-direction: column
+      margin: auto
+  // promo with second slider
   .promo
     &__content
       flex-direction: column
   .about
     &__block  
       margin-bottom: 4rem
+      width: 80%
+    &__title
+      margin-bottom: 4rem
+  .more
+    &__promo
+      max-width: 280px
+      height: 175px
+  .slide-second
+    width: 280px
   .swiper-slide-second
-      order: 1
-
-
+    order: 1
+    width: 100%
+    max-width: 300px
+    margin-left: 12px
+  .swiper-button-next_second
+    left: 270px
+    top: 56px
+  .swiper-button-prev_second
+    left: -31px
+    top: 56px
+  .pagination-second
+    left: 0
   // info section
   .info
     &::before
@@ -100,11 +180,9 @@
       margin-right: 0
       width: 100%
       max-width: 280px
-      // margin: auto
       margin-bottom: 4rem
     &__components
       margin: auto
-
   .section
     &__footer
       display: flex
@@ -187,5 +265,6 @@
     &__message
       margin-right: 0
   .button-top
-    top: 880px
+    position: fixed
+    top: 760px
     right: 30px

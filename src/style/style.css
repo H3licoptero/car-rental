@@ -1433,12 +1433,81 @@ ul > li {
     font-size: 12px; } }
 
 @media screen and (max-width: 375px) {
+  .hero__title {
+    max-width: 150px;
+    width: 100%;
+    font-size: 54px;
+    letter-spacing: normal; }
+  .header__conatiner {
+    max-width: 300px;
+    width: 100%; }
+  .header__menu {
+    max-width: 300px;
+    flex-direction: column;
+    margin: auto;
+    margin-top: 73px;
+    margin-bottom: 15rem; }
+  .menu__nav {
+    display: none; }
+  .logo__header-image {
+    width: 5rem; }
+  .video__content {
+    max-width: 315px;
+    height: 175px;
+    bottom: -22rem; }
+    .video__content::before {
+      left: -16px;
+      background-size: cover; }
+  .video__text-wrap {
+    top: -62px;
+    left: -3px; }
+  .slider__container {
+    flex-direction: column; }
+  .slider__title {
+    margin-bottom: 4rem; }
+  .swiper-container-first {
+    max-width: 300px; }
+  .swiper-slide-first {
+    max-width: 288px;
+    margin-right: 0; }
+  .block__other {
+    margin-left: 80px; }
+  .swiper-slide-primary {
+    max-width: 300px; }
+  .swiper-button-prev_first {
+    left: -12px;
+    top: 72px; }
+  .swiper-button-next_first {
+    right: -46px;
+    top: 72px; }
+  .cards__wrapper {
+    flex-direction: column;
+    margin: auto; }
   .promo__content {
     flex-direction: column; }
   .about__block {
+    margin-bottom: 4rem;
+    width: 80%; }
+  .about__title {
     margin-bottom: 4rem; }
+  .more__promo {
+    max-width: 280px;
+    height: 175px; }
+  .slide-second {
+    width: 280px; }
   .swiper-slide-second {
-    order: 1; }
+    order: 1;
+    width: 100%;
+    max-width: 300px;
+    margin-left: 12px; }
+  .swiper-button-next_second {
+    left: 270px;
+    top: 56px; }
+  .swiper-button-prev_second {
+    left: -31px;
+    top: 56px; }
+  .pagination-second {
+    left: 0; }
   .info::before {
     background-image: none; }
   .info__container {
@@ -1541,5 +1610,6 @@ ul > li {
   .rights__message {
     margin-right: 0; }
   .button-top {
-    top: 880px;
+    position: fixed;
+    top: 760px;
     right: 30px; } }
