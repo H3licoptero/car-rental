@@ -24,19 +24,6 @@
         border-radius: 3px
       &:hover
         color: $change
-    &__video
-      &:hover::before
-      position: absolute
-      content: ""
-      width: 100%
-      height: 100%
-      top: 0  
-      left: 0
-      display: flex
-      border: solid 1px rgba($primary, 0.24)
-      border-radius: 50%
-      padding: 18px
-      color: $primary
   .footer
     &__button
       z-index: 1
@@ -66,8 +53,139 @@
       &:hover
         color: $change
         text-decoration: underline
-        
 @media screen and ( max-width: 1756px )
   .header
     &__container
       max-width: 1240px  
+@media screen and ( max-width: 1200px )
+  html
+    font-size: 12px 
+@media screen and ( max-width: 375px )  
+  .promo
+    &__content
+      flex-direction: column
+  .about
+    &__block  
+      margin-bottom: 4rem
+  .swiper-slide-second
+      order: 1
+
+
+  // info section
+  .info
+    &::before
+     background-image: none 
+    &__container
+      flex-direction: column
+    &__wrap-first
+      max-width: 337px
+      width: 100%
+      margin-right: 0 
+    &__wrap-second
+      justify-content: center
+      width: 100%
+  .features
+    margin-bottom: 4rem
+  .transmission
+    justify-content: center
+    padding: 47px 7px
+  .complete
+    &__wrap-second 
+      display: flex
+      flex-direction: column
+      justify-content: center
+      width: 100%
+    &__docs
+      justify-content: center
+      margin-right: 0
+      width: 100%
+      max-width: 280px
+      // margin: auto
+      margin-bottom: 4rem
+    &__components
+      margin: auto
+
+  .section
+    &__footer
+      display: flex
+      flex-direction: column
+      flex-wrap: wrap
+  // footer + form and price
+  .footer
+    &__dark
+      flex-direction: column
+    &__title-box  
+      display: flex
+      max-width: 337px
+      justify-content: center
+      text-align: center
+      width: 100%
+      margin-right: 0
+      margin-bottom: 3rem
+    &__form-block
+      max-width: 337px
+      width: 100%
+      margin-bottom: 5rem
+    &__total
+      margin-bottom: 10rem
+    &__details
+      display: flex
+    &__questions
+      display: flex
+      order: 1
+      width: 100%   
+      padding: 0
+      background-image: none
+    &__contacts
+      margin-right: 0
+    &__props
+      margin-right: 1rem
+  .details
+    &__container
+      display: flex
+      flex-wrap: wrap
+      width: 100%
+    &__community
+      display: flex
+      flex-direction: row
+      justify-content: space-between
+      width: 100%
+      order: 2
+  .swiper-buttons-box 
+    left: 211px
+    top: 263px
+  .swiper-button-prev_third 
+    right: 49px
+    left: 0
+    top: -112px
+  .swiper-button-next_third  
+      top: -112px
+  .pagination-third
+    left: -174px
+  .questions
+    &__wrapper
+      top: -138px
+      left: 0
+  // блок с соцсетями
+  .socials
+    &__container
+      display: flex
+      flex-wrap: wrap
+    &__social-box
+      display: flex
+      justify-content: center
+      margin-right: 0
+      margin: auto
+      margin-bottom: 2rem
+    &__rights
+      display: flex
+      margin: auto
+    &__icon-box
+      &:last-child
+        margin-right: 0
+  .rights
+    &__message
+      margin-right: 0
+  .button-top
+    top: 880px
+    right: 30px
