@@ -1536,7 +1536,11 @@ ul > li {
     max-width: 280px;
     margin-bottom: 4rem; }
   .complete__components {
-    margin: auto; }
+    max-width: 21rem; }
+  .components__promo {
+    max-width: 245px; }
+  .docs__text {
+    max-width: 200px; }
   .section__footer {
     display: flex;
     flex-direction: column;
