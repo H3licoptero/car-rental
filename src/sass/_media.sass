@@ -1,3 +1,72 @@
+@media screen and ( max-width: 1920px )
+  .menu
+    &__item
+      position: relative
+      &::after
+        display: block
+        position: absolute
+        left: 0
+        bottom: -18px
+        height: 2px
+        background-color: $primary
+        content: ""
+        transition: width 0.3s ease
+      &:hover::after
+        transition: width 0.3s ease
+        width: 100%
+  .other
+    &__wrapper, .other__text
+      transition: all 0.3s ease
+      &:hover::before
+        display: block
+        background-color: rgba($change, 0.8) 
+        transition: all 0.3s ease
+        border-radius: 3px
+      &:hover
+        color: $change
+    &__video
+      &:hover::before
+      position: absolute
+      content: ""
+      width: 100%
+      height: 100%
+      top: 0  
+      left: 0
+      display: flex
+      border: solid 1px rgba($primary, 0.24)
+      border-radius: 50%
+      padding: 18px
+      color: $primary
+  .footer
+    &__button
+      z-index: 1
+      position: relative
+      &:after
+        content: ""
+        position: absolute
+        width: 100%
+        height: 100%
+        top: 0
+        left: 0
+        background: rgb(195,55,34)
+        transition: 0.3s ease
+        background: linear-gradient(0deg, rgba(195,55,34,1) 0%, rgba(253,153,45,1) 100%)
+        opacity: 0
+        z-index: -1
+        border-radius: 3px
+      &:hover::after
+        opacity: 1
+  .socials
+    &__icon-box
+      transition: all 0.3s ease
+      &:hover
+        filter: invert(56%) sepia(40%) saturate(843%) hue-rotate(130deg) brightness(101%) contrast(90%)      
+  .props
+    &__link
+      &:hover
+        color: $change
+        text-decoration: underline
+        
 @media screen and ( max-width: 1756px )
   .header
     &__container
