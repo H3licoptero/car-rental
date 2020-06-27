@@ -408,10 +408,14 @@
         <!-- /.title-box -->
         <div class="form-block footer__form-block">
           <form action="#" method="" class="form footer__form">
-            <select class="select form__select" name="" id="">
-              <option class="select__option" value="0">10 дней <span class="select__value">-20%</span></option>
-              <option class="select__option" value="1">20 дней <em>-30%</em></option>
-            </select>
+            <ul class="select form__select">
+              <li class="select__option">10 дней <span class="select__value">-20%</span>
+                <ul class="select__sub">
+                  <li class="select__option">20 дней <span class="select__value">-30%</span></li>
+                  <li class="select__option">30 дней <span class="select__value">-35%</span></li>
+                </ul>
+              </li>
+            </ul>
             <label class="form__label" for=""></label>
             <input class="input form__input" type="text" placeholder="Ваш телефон">
             <button class="button footer__button">Заказать</button>

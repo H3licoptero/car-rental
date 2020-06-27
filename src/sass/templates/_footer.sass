@@ -5,6 +5,7 @@
   &__dark
     display: flex
     margin-top: 14.285714rem
+    margin-bottom: 12.9rem
   &__title-box
     display: flex
     max-width: 198px
@@ -18,21 +19,21 @@
   &__form-block 
     margin-right: 7.028571rem
   &__price
-    margin-right: 40px
+    margin-right: 26px
     font-family: $istok 
     font-weight: bold
     font-size: 6.14285rem
+    line-height: 1.1
     color: $light
   &__form-block
     max-width: 21.857142rem
     width: 100%
-    margin-bottom: 8rem
   &__form
     display: flex
     flex-direction: column
     justify-content: center
+    margin-bottom: 1.3985rem
     outline: none
-    margin-bottom: 1.9285rem
   &__button
     margin-bottom: 
     padding: 13px 110px
@@ -66,7 +67,7 @@
     background-image: url("../img/border-3.png")
     background-repeat: no-repeat
 .currency
-  top: -48px
+  top: -42px
   font-family: $sans
   font-size: 1.714285rem
   font-weight: bold
@@ -75,13 +76,13 @@
 .discount
   display: flex
   flex-direction: row
-  margin-left: 5px
+  margin-left: 8px
   font-family: $sans  
-  font-size: 24px
+  font-size: 1.71428rem
   font-weight: bold
-  line-height: 1.5
   color: $change
 .select
+  position: relative
   padding: 27px 
   padding-left: 34px
   font-size: 1.71428rem
@@ -91,27 +92,31 @@
   border: solid 1px $ligther-dark
   border-radius: 3px
   color: $light
-  appearance: none
   background: url('../img/arrow-down.png') no-repeat right
   background-position: 262px 
   outline: none
-  &::after
-    position: absolute
-    content: "-20%"
-    top: 0
-    left: 0
-    width: 100%
-    height: 100%
-    color: $grey
+  cursor: pointer
   &__span
     font-size: 16px
+  &__sub  
+    position: absolute
+    display: none
+    padding-left: 0
+    cursor: pointer
+    &:hover
+      display: block
+      transition: 0.3s ease
   &__value
-    font-size: 12px
+    margin-left: 12px
+    font-size: 16px
+    color: $grey
 .form
   &__select 
-    margin-bottom: 45px 
+    margin-bottom: 3.5rem 
+    &:hover
+      display: block
   &__input  
-    margin-bottom: 3.2142rem
+    margin-bottom: 3.4142rem
     padding: 10px 0
     font-family: $sans
     font-size: 1.14285rem
@@ -127,6 +132,7 @@
   &__container
     display: flex
     justify-content: space-between
+    width: 100%
   &__title
     margin-bottom: 3.78571rem
     font-family: $sans
@@ -166,7 +172,6 @@
     top: 0
     background: url("../img/slider-button-prev.svg") no-repeat center
     outline: none
-    // z-index: 2
     cursor: pointer
     &::after
       display: none

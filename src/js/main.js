@@ -9,7 +9,7 @@ $(document).ready(function () {
       prevEl: ".swiper-button-prev",
       nextEl: ".swiper-button-next",
     },
-    // slidesPerView: 2,
+    slidesPerView: 1,
   });
   
   let mySwiperSecond = new Swiper(".swiper-container-second", {
@@ -73,5 +73,18 @@ $(document).ready(function () {
         return false;
       }
     );
+  });
+  // list open
+  let list = document.querySelector(".form__select");
+  list.addEventListener("click", (event) => {
+    let target = event.target;
+    let sub = document.querySelector(".select__sub");
+
+    if (target) {
+      sub.style.display = "block";
+    } else if (target) {
+      sub.style.display = "none";
+    }
+
   });
 });

@@ -1062,7 +1062,8 @@ ul > li {
     border-top: 1px solid #777777; }
   .footer__dark {
     display: flex;
-    margin-top: 14.285714rem; }
+    margin-top: 14.285714rem;
+    margin-bottom: 12.9rem; }
   .footer__title-box {
     display: flex;
     max-width: 198px;
@@ -1076,21 +1077,21 @@ ul > li {
   .footer__form-block {
     margin-right: 7.028571rem; }
   .footer__price {
-    margin-right: 40px;
+    margin-right: 26px;
     font-family: "Istok Web", sans-serif;
     font-weight: bold;
     font-size: 6.14285rem;
+    line-height: 1.1;
     color: #ffffff; }
   .footer__form-block {
     max-width: 21.857142rem;
-    width: 100%;
-    margin-bottom: 8rem; }
+    width: 100%; }
   .footer__form {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    outline: none;
-    margin-bottom: 1.9285rem; }
+    margin-bottom: 1.3985rem;
+    outline: none; }
   .footer__button {
     padding: 13px 110px;
     font-family: "Istok Web", sans-serif;
@@ -1124,7 +1125,7 @@ ul > li {
     background-repeat: no-repeat; }
 
 .currency {
-  top: -48px;
+  top: -42px;
   font-family: "Open Sans", sans-serif;
   font-size: 1.714285rem;
   font-weight: bold;
@@ -1134,14 +1135,14 @@ ul > li {
 .discount {
   display: flex;
   flex-direction: row;
-  margin-left: 5px;
+  margin-left: 8px;
   font-family: "Open Sans", sans-serif;
-  font-size: 24px;
+  font-size: 1.71428rem;
   font-weight: bold;
-  line-height: 1.5;
   color: #17bebb; }
 
 .select {
+  position: relative;
   padding: 27px;
   padding-left: 34px;
   font-size: 1.71428rem;
@@ -1151,30 +1152,32 @@ ul > li {
   border: solid 1px #444444;
   border-radius: 3px;
   color: #ffffff;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
   background: url("../img/arrow-down.png") no-repeat right;
   background-position: 262px;
-  outline: none; }
-  .select::after {
-    position: absolute;
-    content: "-20%";
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    color: #777777; }
+  outline: none;
+  cursor: pointer; }
   .select__span {
     font-size: 16px; }
+  .select__sub {
+    position: absolute;
+    display: none;
+    padding-left: 0;
+    cursor: pointer; }
+    .select__sub:hover {
+      display: block;
+      transition: 0.3s ease; }
   .select__value {
-    font-size: 12px; }
+    margin-left: 12px;
+    font-size: 16px;
+    color: #777777; }
 
 .form__select {
-  margin-bottom: 45px; }
+  margin-bottom: 3.5rem; }
+  .form__select:hover {
+    display: block; }
 
 .form__input {
-  margin-bottom: 3.2142rem;
+  margin-bottom: 3.4142rem;
   padding: 10px 0;
   font-family: "Open Sans", sans-serif;
   font-size: 1.14285rem;
@@ -1195,7 +1198,8 @@ ul > li {
 
 .details__container {
   display: flex;
-  justify-content: space-between; }
+  justify-content: space-between;
+  width: 100%; }
 
 .details__title {
   margin-bottom: 3.78571rem;
@@ -1363,3 +1367,7 @@ ul > li {
   .button-top__image {
     max-width: 20px;
     height: 20px; }
+
+@media screen and (max-width: 1756px) {
+  .header__container {
+    max-width: 1240px; } }
