@@ -1,5 +1,5 @@
 $(document).ready(function () {
-  "use strict";
+  ("use strict");
   // scroll top
   $(function () {
     $(window).scroll(function () {
@@ -59,12 +59,12 @@ $(document).ready(function () {
       993: {
         width: 306,
         spaceBetween: 30,
-        centeredSlides: true
+        centeredSlides: true,
       },
       1201: {
         width: 306,
-        spaceBetween: 90
-      } 
+        spaceBetween: 90,
+      },
     },
     centeredSlides: true,
   });
@@ -118,5 +118,34 @@ $(document).ready(function () {
     } else if (target) {
       sub.style.display = "none";
     }
+  });
+
+  // youtube video
+  let player;
+  let playerTwo
+  function videoPlay(event) {
+    event.target.playVideo();
+  }
+
+  $(".video__btn").on("click", function onYouTubeIframeAPIReady() {
+    player = new YT.Player("player", {
+      height: "100%",
+      width: "100%",
+      videoId: "BkGFhBypWrc",
+      events: {
+        onReady: videoPlay,
+      },
+    });
+  });
+
+  $(".other__wrapper").on("click", function onYouTubeIframeAPIReady() {
+    playerTwo = new YT.Player("player", {
+      height: "100%",
+      width: "100%",
+      videoId: "5566-IfmPKA",
+      events: {
+        onReady: videoPlay,
+      },
+    });
   });
 });

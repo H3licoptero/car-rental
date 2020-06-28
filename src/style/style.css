@@ -456,7 +456,7 @@ ul > li {
   position: relative;
   max-width: 64.28573rem;
   width: 100%;
-  height: 36.14285rem;
+  min-height: 36.14285rem;
   margin: auto;
   bottom: -13rem; }
   .video__content::before {
@@ -504,10 +504,6 @@ ul > li {
   cursor: pointer; }
 
 .video__image-box {
-  display: flex;
-  border: solid 1px rgba(221, 221, 221, 0.24);
-  border-radius: 50%;
-  padding: 18px;
   color: #dddddd; }
 
 .slider__section {
@@ -1458,7 +1454,7 @@ ul > li {
   .other__video {
     max-width: 21.857142rem;
     width: 100%;
-    height: 100%;
+    min-height: 100%;
     border-radius: 3px; }
   .video__content::before {
     background-size: cover; }
@@ -1545,7 +1541,7 @@ ul > li {
     width: 5rem; }
   .video__content {
     max-width: 36.25rem;
-    height: 20.583333rem;
+    min-height: 20.583333rem;
     bottom: -13rem; }
     .video__content::before {
       left: -2.13333rem;
@@ -1774,7 +1770,7 @@ ul > li {
     width: 5rem; }
   .video__content {
     max-width: 36.25rem;
-    height: 20.583333rem;
+    min-height: 20.583333rem;
     bottom: -13rem; }
     .video__content::before {
       left: -2.13333rem;
@@ -1785,7 +1781,7 @@ ul > li {
   .slider__container {
     flex-direction: column;
     margin: auto;
-    margin-top: 12.85714rem;
+    margin-top: 17.85714rem;
     margin-bottom: 7.785714rem;
     max-width: 32rem; }
   .slider__title {
@@ -1823,13 +1819,14 @@ ul > li {
     margin-top: 4rem;
     margin-bottom: 10rem; }
   .about__block {
+    margin: auto;
     margin-bottom: 4rem;
-    max-width: 20.83333rem; }
+    max-width: 27.83333rem; }
   .about__title {
     margin-bottom: 4rem;
-    max-width: 17.83333rem; }
+    max-width: 25.83333rem; }
   .about__text {
-    max-width: 17.5rem; }
+    max-width: 27.5rem; }
   .more__promo {
     max-width: 30rem;
     height: 17.58333rem; }
@@ -1968,7 +1965,7 @@ ul > li {
 
 @media screen and (max-width: 576px) {
   .hero {
-    min-height: 90vh; }
+    min-height: 120vh; }
     .hero__container {
       margin-bottom: 1rem;
       max-width: 26.66666rem; }
@@ -1994,7 +1991,8 @@ ul > li {
     width: 5rem; }
   .video__content {
     max-width: 26.25rem;
-    height: 14.583333rem;
+    width: 100%;
+    min-height: 14.583333rem;
     bottom: -8rem; }
     .video__content::before {
       left: -1.33333rem;
@@ -2041,13 +2039,14 @@ ul > li {
     margin-top: 4rem;
     margin-bottom: 10rem; }
   .about__block {
+    margin: auto;
     margin-bottom: 4rem;
     max-width: 20.83333rem; }
   .about__title {
     margin-bottom: 4rem;
     max-width: 17.83333rem; }
   .about__text {
-    max-width: 17.5rem; }
+    max-width: 21.5rem; }
   .more__promo {
     max-width: 23.33333rem;
     height: 14.58333rem; }
@@ -2182,17 +2181,19 @@ ul > li {
     margin-right: 0; }
   .button-top {
     position: fixed;
-    top: 58rem;
+    top: 42rem;
     right: 4rem; } }
 
 @media screen and (max-width: 375px) {
-  .hero__container {
-    margin-bottom: 1rem; }
-  .hero__title {
-    max-width: 22.5rem;
-    width: 100%;
-    font-size: 4rem;
-    letter-spacing: normal; }
+  .hero {
+    min-height: 120vh; }
+    .hero__container {
+      margin-bottom: 1rem; }
+    .hero__title {
+      max-width: 22.5rem;
+      width: 100%;
+      font-size: 4rem;
+      letter-spacing: normal; }
   .header__container {
     max-width: 25rem;
     height: 16.6666rem;
@@ -2210,7 +2211,7 @@ ul > li {
     width: 5rem; }
   .video__content {
     max-width: 22.25rem;
-    height: 12.583333rem;
+    min-height: 12.583333rem;
     bottom: -11rem; }
     .video__content::before {
       left: -1.33333rem;
@@ -2256,8 +2257,8 @@ ul > li {
     width: 100%; }
   .about__block {
     margin-bottom: 4rem;
-    max-width: 19.166666rem;
-    width: 100%; }
+    width: 100%;
+    margin-left: 0; }
   .about__title {
     margin-bottom: 4rem; }
   .more__promo {
@@ -2329,10 +2330,16 @@ ul > li {
     width: 100%;
     margin-right: 0;
     margin-bottom: 3rem; }
+  .footer__title {
+    font-size: 2.271428rem; }
   .footer__form-block {
     max-width: 28.08333rem;
     width: 100%;
     margin-bottom: 5rem; }
+  .footer__form {
+    max-width: 24rem;
+    margin-right: 0;
+    margin: auto; }
   .footer__total {
     margin-bottom: 10rem; }
   .footer__details {
@@ -2390,5 +2397,5 @@ ul > li {
     margin-right: 0; }
   .button-top {
     position: fixed;
-    top: 58rem;
-    right: 2.5rem; } }
+    top: 42rem;
+    right: 2rem; } }
