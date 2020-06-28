@@ -1,17 +1,54 @@
 $(document).ready(function () {
-  "use strict"; 
+  "use strict";
+  // scroll top
+  $(function () {
+    $(window).scroll(function () {
+      if ($(window).scrollTop() > 300) {
+        $(".button-top").fadeIn();
+      } else {
+        $(".button-top").fadeOut();
+      }
+    });
+    $(".button-top").click(function () {
+      $("html, body").animate({ scrollTop: 0 }, 1000);
+      return false;
+    });
+    let $page = $("html, body");
+    $(
+      'a[href="#terms"], a[href="#info"], a[href="#questions"], a[href="#contacts"]'
+    ).click(function () {
+      $page.animate(
+        {
+          scrollTop: $($.attr(this, "href")).offset().top,
+        },
+        1000
+      );
+      return false;
+    });
+  });
+  // slider
   let mySwiper = new Swiper(".swiper-container-first", {
     // Optional parameters
     loop: true,
     width: 306,
     spaceBetween: 90,
+    // число зацикленных слайдов
+    loopAdditionalSlides: [4],
     navigation: {
       prevEl: ".swiper-button-prev",
       nextEl: ".swiper-button-next",
     },
     slidesPerView: 1,
+    breakpoints: {
+      320: {
+        width: 288,
+        spaceBetween: 40,
+        centeredSlides: true,
+      },
+    },
+    centeredSlides: true,
   });
-  
+
   let mySwiperSecond = new Swiper(".swiper-container-second", {
     // Optional parameters
     loop: true,
@@ -50,30 +87,6 @@ $(document).ready(function () {
     centeredSlides: true,
   });
 
-  // scroll top
-  $(function () {
-    $(window).scroll(function() {
-      if ($(window).scrollTop() > 300) {
-        $(".button-top").fadeIn();
-      } else {
-        $(".button-top").fadeOut();
-      }
-    });
-    $(".button-top").click(function () {
-      $("html, body").animate({ scrollTop: 0 }, 1000);
-      return false;
-    });
-    let $page = $("html, body");
-    $('a[href="#terms"], a[href="#info"], a[href="#questions"], a[href="#contacts"]').click(
-      function () {
-        $page.animate(
-          { scrollTop: $($.attr(this, "href")).offset().top },
-          1000
-        );
-        return false;
-      }
-    );
-  });
   // list open
   let list = document.querySelector(".form__select");
   list.addEventListener("click", (event) => {
@@ -85,6 +98,5 @@ $(document).ready(function () {
     } else if (target) {
       sub.style.display = "none";
     }
-
   });
 });
