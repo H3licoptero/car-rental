@@ -45,6 +45,16 @@ $(document).ready(function () {
         spaceBetween: 40,
         centeredSlides: true,
       },
+      576: {
+        width: 380,
+        spaceBetween: 40,
+        centeredSlides: true,
+      },
+      768: {
+        width: 380,
+        spaceBetween: 60,
+        centeredSlides: true,
+      },
     },
     centeredSlides: true,
   });

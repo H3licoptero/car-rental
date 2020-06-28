@@ -60,9 +60,11 @@
 @media screen and ( max-width: 1200px )
   html
     font-size: 12px 
-@media screen and ( max-width: 576px )
+@media screen and ( max-width: 992px )
   // hero
   .hero
+    min-height: 90vh
+    // height: 14.583333rem
     &__title
       max-width: 25.5rem
       width: 100%
@@ -86,69 +88,94 @@
       width: 5rem
   .video
     &__content
-      max-width: 26.25rem
-      height: 14.583333rem
-      bottom: -22rem
+      max-width: 36.25rem
+      height: 20.583333rem
+      bottom: -13rem
       &::before
-        left: -1.33333rem
+        left: -2.13333rem
         background-size: cover 
     &__text-wrap
-      top: -5.16666rem
+      top: -9.16666rem
       left: -3px
+  // блок внутри block__other
+  // меняет ширину контейнера для изображения  
   // slider section
   .slider
     &__container
-      flex-direction: column  
+      flex-direction: column
+      margin: auto  
+      margin-top: 12.85714rem
+      margin-bottom: 7.785714rem
+      max-width: 32rem
     &__title  
       margin-bottom: 4rem
+  // container для изображений слайдера внутри swiper-slide
+  .other
+    &__wrapper
+      height: 17.285714rem
+      width: 29rem
+    &__video
+      max-width: 31rem
   .swiper-container-first 
-    max-width: 25rem
+    max-width: 31rem
   .swiper-slide-first
-    max-width: 24rem
+    max-width: 32rem
     margin-right: 0 
   .block__other
-    margin-left: 6.666666rem
+    margin-left: 0
   .swiper-slide-primary
-    max-width: 25rem
+    max-width: 32rem
   .swiper-button-prev_first
-    left: -1rem
-    top: 6rem
+    left: -4rem
+    top: 8.5rem
   .swiper-button-next_first
-    right: -3.83333rem
-    top: 6rem
+    right: -0.83333rem
+    top: 8.5rem
   // слайдер доделать обязательно 27,06
   //  reviews
   .cards
     &__wrapper
-      flex-direction: column
+      flex-direction: row
+      flex-wrap: wrap
       margin: auto
+  .reviews
+    &__cards
+      margin-right: 5.66666rem
   // promo with second slider
   .promo
     &__content
       flex-direction: column
+      max-width: 32rem
+      margin: auto
+      margin-top: 4rem
+      margin-bottom: 10rem 
   .about
     &__block  
+      // margin: auto
       margin-bottom: 4rem
-      width: 80%
+      max-width: 20.83333rem
     &__title
       margin-bottom: 4rem
+      max-width: 17.83333rem
+    &__text
+      max-width: 17.5rem
   .more
     &__promo
-      max-width: 23.33333rem
-      height: 14.58333rem
+      max-width: 30rem
+      height: 17.58333rem
   .slide-second
     width: 23.33333rem
   .swiper-slide-second
     order: 1
     width: 100%
-    max-width: 25rem
+    max-width: 32rem
     margin-left: 1rem
   .swiper-button-next_second
-    left: 22.5rem
-    top: 4.66666rem
+    left: 29.5rem
+    top: 5.66666rem
   .swiper-button-prev_second
     left: -2.58333rem
-    top: 4.66666rem
+    top: 5.66666rem
   .pagination-second
     left: 0
   // info section
@@ -158,9 +185,9 @@
     &__container
       flex-direction: column
     &__wrap-first
-      max-width: 28.08333rem
+      max-width: 21rem
       width: 100%
-      margin-right: 0 
+      margin: auto
     &__wrap-second
       justify-content: center
       width: 100%
@@ -172,17 +199,19 @@
   .complete
     &__wrap-second 
       display: flex
-      flex-direction: column
-      justify-content: center
+      flex-direction: row
+      justify-content: space-around
       width: 100%
     &__docs
       justify-content: center
       margin-right: 0
       width: 100%
-      max-width: 23.33333rem
+      max-width: 21rem
+      margin: auto
       margin-bottom: 4rem
     &__components
       max-width: 21rem
+      margin: auto
   .components
     &__promo
       max-width: 20.41666rem
@@ -198,6 +227,10 @@
   .footer
     &__dark
       flex-direction: column
+      max-width: 336px
+      margin: auto
+      margin-top: 14.28rem
+      margin-bottom: 10rem
     &__title-box  
       display: flex
       max-width: 28.08333rem
@@ -228,6 +261,7 @@
     &__container
       display: flex
       flex-wrap: wrap
+      max-width: 25.5rem
       width: 100%
     &__community
       display: flex
@@ -255,6 +289,7 @@
     &__container
       display: flex
       flex-wrap: wrap
+      max-width: 21rem
     &__social-box
       display: flex
       justify-content: center
@@ -272,8 +307,500 @@
       margin-right: 0
   .button-top
     position: fixed
-    top: 72rem
-    right: 4.5rem  
+    top: 64rem
+    right: 4rem  
+@media screen and ( max-width: 768px )
+  // hero
+  .hero
+    min-height: 90vh
+    // height: 14.583333rem
+    &__title
+      max-width: 25.5rem
+      width: 100%
+      font-size: 4.5rem
+      letter-spacing: normal
+  .header
+    &__conatiner
+      max-width: 25rem
+      width: 100%
+    &__menu
+      max-width: 25rem
+      flex-direction: column
+      margin: auto
+      margin-top: 6.083333rem
+      margin-bottom: 15rem
+  .menu
+    &__nav
+      display: none
+  .logo
+    &__header-image
+      width: 5rem
+  .video
+    &__content
+      max-width: 36.25rem
+      height: 20.583333rem
+      bottom: -13rem
+      &::before
+        left: -2.13333rem
+        background-size: cover 
+    &__text-wrap
+      top: -9.16666rem
+      left: -3px
+  // блок внутри block__other
+  // меняет ширину контейнера для изображения  
+  // slider section
+  .slider
+    &__container
+      flex-direction: column
+      margin: auto  
+      margin-top: 12.85714rem
+      margin-bottom: 7.785714rem
+      max-width: 32rem
+    &__title  
+      margin-bottom: 4rem
+  // container для изображений слайдера внутри swiper-slide
+  .other
+    &__wrapper
+      height: 17.285714rem
+      width: 29rem
+    &__video
+      max-width: 31rem
+  .swiper-container-first 
+    max-width: 31rem
+  .swiper-slide-first
+    max-width: 32rem
+    margin-right: 0 
+  .block__other
+    margin-left: 0
+  .swiper-slide-primary
+    max-width: 32rem
+  .swiper-button-prev_first
+    left: -4rem
+    top: 8.5rem
+  .swiper-button-next_first
+    right: -0.83333rem
+    top: 8.5rem
+  // слайдер доделать обязательно 27,06
+  //  reviews
+  .cards
+    &__wrapper
+      flex-direction: row
+      flex-wrap: wrap
+      margin: auto
+  .reviews
+    &__cards
+      margin-right: 5.66666rem
+  // promo with second slider
+  .promo
+    &__content
+      flex-direction: column
+      max-width: 32rem
+      margin: auto
+      margin-top: 4rem
+      margin-bottom: 10rem 
+  .about
+    &__block  
+      // margin: auto
+      margin-bottom: 4rem
+      max-width: 20.83333rem
+    &__title
+      margin-bottom: 4rem
+      max-width: 17.83333rem
+    &__text
+      max-width: 17.5rem
+  .more
+    &__promo
+      max-width: 30rem
+      height: 17.58333rem
+  .slide-second
+    width: 23.33333rem
+  .swiper-slide-second
+    order: 1
+    width: 100%
+    max-width: 32rem
+    margin-left: 1rem
+  .swiper-button-next_second
+    left: 29.5rem
+    top: 5.66666rem
+  .swiper-button-prev_second
+    left: -2.58333rem
+    top: 5.66666rem
+  .pagination-second
+    left: 0
+  // info section
+  .info
+    &::before
+     background-image: none 
+    &__container
+      flex-direction: column
+    &__wrap-first
+      max-width: 21rem
+      width: 100%
+      margin: auto
+    &__wrap-second
+      justify-content: center
+      width: 100%
+  .features
+    margin-bottom: 4rem
+  .transmission
+    justify-content: center
+    padding: 47px 7px
+  .complete
+    &__wrap-second 
+      display: flex
+      flex-direction: row
+      justify-content: space-around
+      width: 100%
+    &__docs
+      justify-content: center
+      margin-right: 0
+      width: 100%
+      max-width: 21rem
+      margin: auto
+      margin-bottom: 4rem
+    &__components
+      max-width: 21rem
+      margin: auto
+  .components
+    &__promo
+      max-width: 20.41666rem
+  .docs
+    &__text
+      max-width: 16.66666rem
+  .section
+    &__footer
+      display: flex
+      flex-direction: column
+      flex-wrap: wrap
+  // footer + form and price
+  .footer
+    &__dark
+      flex-direction: column
+      max-width: 336px
+      margin: auto
+      margin-top: 14.28rem
+      margin-bottom: 10rem
+    &__title-box  
+      display: flex
+      max-width: 28.08333rem
+      justify-content: center
+      text-align: center
+      width: 100%
+      margin-right: 0
+      margin-bottom: 3rem
+    &__form-block
+      max-width: 28.08333rem
+      width: 100%
+      margin-bottom: 5rem
+    &__total
+      margin-bottom: 10rem
+    &__details
+      display: flex
+    &__questions
+      display: flex
+      order: 1
+      width: 100%   
+      padding: 0
+      background-image: none
+    &__contacts
+      margin-right: 0
+    &__props
+      margin-right: 1rem
+  .details
+    &__container
+      display: flex
+      flex-wrap: wrap
+      max-width: 25.5rem
+      width: 100%
+    &__community
+      display: flex
+      flex-direction: row
+      justify-content: space-between
+      width: 100%
+      order: 2
+  .swiper-buttons-box 
+    left: 17.58333rem
+    top: 24.166666rem
+  .swiper-button-prev_third 
+    right: 4.08333rem
+    left: 0
+    top: -9.33333rem
+  .swiper-button-next_third  
+      top: -9.33333rem
+  .pagination-third
+    left: -14.5rem
+  .questions
+    &__wrapper
+      top: -11.5rem
+      left: 0
+  // блок с соцсетями
+  .socials
+    &__container
+      display: flex
+      flex-wrap: wrap
+      max-width: 21rem
+    &__social-box
+      display: flex
+      justify-content: center
+      margin-right: 0
+      margin: auto
+      margin-bottom: 2rem
+    &__rights
+      display: flex
+      margin: auto
+    &__icon-box
+      &:last-child
+        margin-right: 0
+  .rights
+    &__message
+      margin-right: 0
+  .button-top
+    position: fixed
+    top: 64rem
+    right: 4rem  
+  
+@media screen and ( max-width: 576px )
+  // hero
+  .hero
+    min-height: 90vh
+    // height: 14.583333rem
+    &__title
+      max-width: 25.5rem
+      width: 100%
+      font-size: 4.5rem
+      letter-spacing: normal
+  .header
+    &__conatiner
+      max-width: 25rem
+      width: 100%
+    &__menu
+      max-width: 25rem
+      flex-direction: column
+      margin: auto
+      margin-top: 6.083333rem
+      margin-bottom: 15rem
+  .menu
+    &__nav
+      display: none
+  .logo
+    &__header-image
+      width: 5rem
+  .video
+    &__content
+      max-width: 26.25rem
+      height: 14.583333rem
+      bottom: -8rem
+      &::before
+        left: -1.33333rem
+        background-size: cover 
+    &__text-wrap
+      top: -9.16666rem
+      left: -3px
+  // slider section
+  .other
+    &__wrapper
+      height: 12.285714rem
+      width: 21.857142rem
+    &__video
+      max-width: 21.857142rem
+  .slider
+    &__container
+      flex-direction: column
+      margin: auto  
+      margin-top: 12.85714rem
+      margin-bottom: 7.785714rem
+      max-width: 25rem
+    &__title  
+      margin-bottom: 4rem
+  .swiper-container-first 
+    max-width: 25rem
+  .swiper-slide-first
+    max-width: 24rem
+    margin-right: 0 
+  .block__other
+    margin-left: 0
+  .swiper-slide-primary
+    max-width: 25rem
+  .swiper-button-prev_first
+    left: -4rem
+    top: 6rem
+  .swiper-button-next_first
+    right: -0.83333rem
+    top: 6rem
+  // слайдер доделать обязательно 27,06
+  //  reviews
+  .cards
+    &__wrapper
+      flex-direction: column
+      margin: auto
+  // promo with second slider
+  .promo
+    &__content
+      flex-direction: column
+      max-width: 25.5rem
+      margin: auto
+      margin-top: 4rem
+      margin-bottom: 10rem 
+  .about
+    &__block  
+      // margin: auto
+      margin-bottom: 4rem
+      max-width: 20.83333rem
+    &__title
+      margin-bottom: 4rem
+      max-width: 17.83333rem
+    &__text
+      max-width: 17.5rem
+  .more
+    &__promo
+      max-width: 23.33333rem
+      height: 14.58333rem
+  .slide-second
+    width: 23.33333rem
+  .swiper-slide-second
+    order: 1
+    width: 100%
+    max-width: 25rem
+    margin-left: 1rem
+  .swiper-button-next_second
+    left: 22.5rem
+    top: 4.66666rem
+  .swiper-button-prev_second
+    left: -2.58333rem
+    top: 4.66666rem
+  .pagination-second
+    left: 0
+  // info section
+  .info
+    &::before
+     background-image: none 
+    &__container
+      flex-direction: column
+    &__wrap-first
+      max-width: 21rem
+      width: 100%
+      margin: auto
+    &__wrap-second
+      justify-content: center
+      width: 100%
+  .features
+    margin-bottom: 4rem
+  .transmission
+    justify-content: center
+    padding: 47px 7px
+  .complete
+    &__wrap-second 
+      display: flex
+      flex-direction: column
+      justify-content: center
+      width: 100%
+    &__docs
+      justify-content: center
+      margin-right: 0
+      width: 100%
+      max-width: 21rem
+      margin: auto
+      margin-bottom: 4rem
+    &__components
+      max-width: 21rem
+      margin: auto
+  .components
+    &__promo
+      max-width: 20.41666rem
+  .docs
+    &__text
+      max-width: 16.66666rem
+  .section
+    &__footer
+      display: flex
+      flex-direction: column
+      flex-wrap: wrap
+  // footer + form and price
+  .footer
+    &__dark
+      flex-direction: column
+      max-width: 336px
+      margin: auto
+      margin-top: 14.28rem
+      margin-bottom: 10rem
+    &__title-box  
+      display: flex
+      max-width: 28.08333rem
+      justify-content: center
+      text-align: center
+      width: 100%
+      margin-right: 0
+      margin-bottom: 3rem
+    &__form-block
+      max-width: 28.08333rem
+      width: 100%
+      margin-bottom: 5rem
+    &__total
+      margin-bottom: 10rem
+    &__details
+      display: flex
+    &__questions
+      display: flex
+      order: 1
+      width: 100%   
+      padding: 0
+      background-image: none
+    &__contacts
+      margin-right: 0
+    &__props
+      margin-right: 1rem
+  .details
+    &__container
+      display: flex
+      flex-wrap: wrap
+      max-width: 25.5rem
+      width: 100%
+    &__community
+      display: flex
+      flex-direction: row
+      justify-content: space-between
+      width: 100%
+      order: 2
+  .swiper-buttons-box 
+    left: 17.58333rem
+    top: 24.166666rem
+  .swiper-button-prev_third 
+    right: 4.08333rem
+    left: 0
+    top: -9.33333rem
+  .swiper-button-next_third  
+      top: -9.33333rem
+  .pagination-third
+    left: -14.5rem
+  .questions
+    &__wrapper
+      top: -11.5rem
+      left: 0
+  // блок с соцсетями
+  .socials
+    &__container
+      display: flex
+      flex-wrap: wrap
+      max-width: 21rem
+    &__social-box
+      display: flex
+      justify-content: center
+      margin-right: 0
+      margin: auto
+      margin-bottom: 2rem
+    &__rights
+      display: flex
+      margin: auto
+    &__icon-box
+      &:last-child
+        margin-right: 0
+  .rights
+    &__message
+      margin-right: 0
+  .button-top
+    position: fixed
+    top: 64rem
+    right: 4rem  
 @media screen and ( max-width: 375px )  
   // hero
   .hero
@@ -346,6 +873,7 @@
     &__content
       flex-direction: column
       margin-top: 6.25rem‬
+      width: 100%
   .about
     &__block  
       margin-bottom: 4rem
