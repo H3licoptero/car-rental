@@ -57,14 +57,106 @@
   .header
     &__container
       max-width: 1240px  
+@media screen and ( max-width: 1438px )
+  .header
+    &__container
+      max-width: 80.83333rem
+      width: 100%
 @media screen and ( max-width: 1200px )
   html
-    font-size: 12px 
+    font-size: 12px
+  .hero
+    &__container
+      max-width: 74.166666rem
+  .header
+    &__container
+      max-width: 80.83333rem
+      width: 100%
+  // first slider
+  .other
+    &__wrapper
+      position: relative
+      width: 100%
+      height: 12.285714rem
+      margin-bottom: 1.257142rem
+    &__video
+      max-width: 21.857142rem
+      width: 100%
+      height: 100%
+      border-radius: 3px
+  .video
+    &__content
+      &::before
+        background-size: cover
+  .block
+    &__other
+      margin-right: 6.4285714rem
+      max-width: 21.857142rem
+      &:last-child
+        margin-right: 0
+  .slider
+    &__title
+      margin-right: 4.642857rem
+  .swiper-slide-first
+    max-width: 306px  
+  .swiper-container-first
+    max-width: 50.357142rem 
+  .swiper-button-prev
+    left: -41px
+    top: 75px
+  .swiper-button-next
+    right: -374px
+    top: 75px
+  .other
+    &__video 
+      max-width: 21.857142rem
+  // swiper-second
+  .swiper
+    &-slide-second
+      margin-right: 4.25rem
+  // info block
+  .info
+    &__wrap-first 
+      max-width: 19.214285rem
+  .features
+    &__transmission
+      padding-top: 3.8rem 
+  .complete
+    &__docs
+      margin-right: 8rem
+  .icon
+    &__box
+      margin-right: 0
+  .num
+    margin-right: 13px
+    margin-left: 7px
+
+  // footer block
+  .details
+    &__container
+      height: 16rem
+  .footer
+    &__props
+      width: 10rem
+      margin-right: 4.2859rem
+    &__contacts
+      margin-right: 5.0714rem
+    &__title-box
+      margin-right: 7.085714rem
+    &__form-block
+      max-width: 24.857142rem
+      margin-right: 4.028571rem
+  .button
+    &-top
+      top: 722px
+      right: 87px
 @media screen and ( max-width: 992px )
   // hero
   .hero
     min-height: 90vh
     // height: 14.583333rem
+    &__container
+      max-width: 50rem
     &__title
       max-width: 25.5rem
       width: 100%
@@ -138,6 +230,7 @@
       flex-direction: row
       flex-wrap: wrap
       margin: auto
+      max-width: 55rem
   .reviews
     &__cards
       margin-right: 5.66666rem
@@ -185,14 +278,21 @@
     &__container
       flex-direction: column
     &__wrap-first
-      max-width: 21rem
+      max-width: 43rem
       width: 100%
       margin: auto
     &__wrap-second
       justify-content: center
       width: 100%
   .features
+    display: flex
+    flex-direction: row
     margin-bottom: 4rem
+    &__transmission
+      justify-content: center;
+      padding: 47px 7px
+      width: 24rem
+      margin-right: 1rem
   .transmission
     justify-content: center
     padding: 47px 7px
@@ -202,6 +302,7 @@
       flex-direction: row
       justify-content: space-around
       width: 100%
+      max-width: 43.25rem
     &__docs
       justify-content: center
       margin-right: 0
@@ -247,6 +348,7 @@
       margin-bottom: 10rem
     &__details
       display: flex
+      margin-bottom: 3rem
     &__questions
       display: flex
       order: 1
@@ -300,6 +402,7 @@
       display: flex
       margin: auto
     &__icon-box
+      margin-right: 22px
       &:last-child
         margin-right: 0
   .rights
@@ -314,6 +417,8 @@
   .hero
     min-height: 90vh
     // height: 14.583333rem
+    &__container
+      max-width: 50rem
     &__title
       max-width: 25.5rem
       width: 100%
@@ -434,7 +539,7 @@
     &__container
       flex-direction: column
     &__wrap-first
-      max-width: 21rem
+      max-width: 43rem
       width: 100%
       margin: auto
     &__wrap-second
@@ -684,6 +789,7 @@
       justify-content: center
       width: 100%
   .features
+    flex-direction: column
     margin-bottom: 4rem
   .transmission
     justify-content: center

@@ -39,13 +39,14 @@ $(document).ready(function () {
       nextEl: ".swiper-button-next",
     },
     slidesPerView: 1,
+    // для адаптива, работает как больше или равно(>=) указанной величины
     breakpoints: {
       320: {
         width: 288,
         spaceBetween: 40,
         centeredSlides: true,
       },
-      576: {
+      577: {
         width: 380,
         spaceBetween: 40,
         centeredSlides: true,
@@ -55,6 +56,15 @@ $(document).ready(function () {
         spaceBetween: 60,
         centeredSlides: true,
       },
+      993: {
+        width: 306,
+        spaceBetween: 30,
+        centeredSlides: true
+      },
+      1200: {
+        width: 306,
+        spaceBetween: 90
+      } 
     },
     centeredSlides: true,
   });
