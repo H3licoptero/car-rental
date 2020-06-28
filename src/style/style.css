@@ -2032,7 +2032,8 @@ ul > li {
     top: 6rem; }
   .cards__wrapper {
     flex-direction: column;
-    margin: auto; }
+    margin: auto;
+    max-width: 5rem; }
   .promo__content {
     flex-direction: column;
     max-width: 25.5rem;
@@ -2181,7 +2182,7 @@ ul > li {
     margin-right: 0; }
   .button-top {
     position: fixed;
-    top: 64rem;
+    top: 58rem;
     right: 4rem; } }
 
 @media screen and (max-width: 375px) {
@@ -2236,14 +2237,19 @@ ul > li {
   .swiper-slide-primary {
     max-width: 25rem; }
   .swiper-button-prev_first {
-    left: -1rem;
-    top: 6rem; }
+    left: -1.5rem;
+    top: 6.3rem;
+    height: 50px;
+    width: 50px; }
   .swiper-button-next_first {
-    right: -0.13333rem;
-    top: 6rem; }
+    right: -1.13333rem;
+    top: 6.3rem;
+    height: 50px;
+    width: 50px; }
   .cards__wrapper {
     flex-direction: column;
-    margin: auto; }
+    margin: auto;
+    max-width: 12rem; }
   .promo__content {
     flex-direction: column;
     margin-top: 6.25rem‬;
@@ -2265,11 +2271,15 @@ ul > li {
     max-width: 25rem;
     margin-left: 0; }
   .swiper-button-next_second {
-    left: 19.5rem;
-    top: 4.66666rem; }
+    left: 20.6rem;
+    top: 5rem;
+    height: 50px;
+    width: 50px; }
   .swiper-button-prev_second {
     left: -1.58333rem;
-    top: 4.66666rem; }
+    top: 5rem;
+    height: 50px;
+    width: 50px; }
   .pagination-second {
     left: 0; }
   .info::before {
@@ -2363,7 +2373,8 @@ ul > li {
     left: 0; }
   .socials__container {
     display: flex;
-    flex-wrap: wrap; }
+    flex-wrap: wrap;
+    max-width: 25rem; }
   .socials__social-box {
     display: flex;
     justify-content: center;
@@ -2379,5 +2390,5 @@ ul > li {
     margin-right: 0; }
   .button-top {
     position: fixed;
-    top: 65rem;
+    top: 58rem;
     right: 2.5rem; } }
