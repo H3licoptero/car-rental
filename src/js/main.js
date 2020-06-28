@@ -61,7 +61,7 @@ $(document).ready(function () {
         spaceBetween: 30,
         centeredSlides: true
       },
-      1200: {
+      1201: {
         width: 306,
         spaceBetween: 90
       } 
