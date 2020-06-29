@@ -181,6 +181,8 @@ $(document).ready(function () {
             console.log("Сработало!" + response);
             $(form)[0].reset();
             modal.toggleClass("modal--visible");
+            ym(65264992, "reachGoal", "request");
+            return true;
           },
           error: function (response) {
             console.log("Ошибка отправки.");
