@@ -88,7 +88,6 @@
   font-weight: bold
   color: $change
 .select
-  position: relative
   padding: 27px 
   padding-left: 34px
   font-size: 1.71428rem
@@ -103,38 +102,39 @@
   outline: none
   cursor: pointer
   &__block
+    position: relative
+    width: 100%
     margin-bottom: 45px 
   &__span
     font-size: 16px
-  &__list  
-    position: absolute
-    display: none
-    padding-left: 0
+  &__option  
+    width: 100%
     cursor: pointer
-    &:hover
-      display: block
-      transition: 0.3s ease
   &__value
     margin-left: 12px
     font-size: 16px
     color: $grey
-// .select
-//   &__sub-one
-//     padding-top:  5px
-//     width: 100%
-//     &:hover
-//       background-color: $grey
-//   &__sub-two  
-//     padding-top:  5px
-//     width: 100%
-//     &:hover
-//       background-color: $grey
-// .select
-//   &__option:hover > &__sub,
-//   &__sub &__option &__sub:hover 
-//     display: block
-//     transition: all 0.3s ease
-
+  &__item
+    width: 100%
+    padding: 27px 
+    font-size: 1.71428rem
+    font-weight: bold
+    line-height: 1.5
+    background-color: $dark
+    border: solid 1px $ligther-dark
+    border-radius: 3px
+    color: $light
+    cursor: pointer
+  &__list
+    position: absolute
+    display: block
+    padding-left: 0
+    width: 100%
+    z-index: 2
+    top: -3px
+    top: 79px
+.inactive-list
+  display: none
 .form
   &__select 
     margin-bottom: 3.5rem 
@@ -317,7 +317,9 @@
     height: 20px
 .input-block
   position: relative
-  // width: 100%
+.social
+  &__links
+    line-height: 0
 .invalid
   color: red
 span.invalid
@@ -327,5 +329,65 @@ span.invalid
   margin: 0
   padding: 0
 
-
+.modal
+  position: fixed
+  z-index: 199
+  opacity: 0
+  visibility: hidden
+  top: 0
+  right: 0
+  bottom: 0
+  left: 0
+  width: 100%
+  height: 100%
+  background-color: rgba(34,34,34,.6)
+  display: flex
+  justify-content: center
+  align-items: center
+  &--visible
+    visibility: visible
+    opacity: 1
+  &__dialog 
+    display: flex
+    justify-content: center
+    align-items: center
+    flex-direction: column
+    position: relative
+    max-width: 50rem
+    padding: 3rem 3rem
+    color: #222
+    background: #f7f4f2
+    background-size: cover
+  &__title 
+    margin-top: 2rem
+    text-align: center
+    font-family: "Open Sans",sans-serif
+    font-weight: 700
+    font-style: normal
+    font-size: 3.6rem
+  &__text 
+    text-align: center
+    font-family: "Open Sans",sans-serif
+    font-weight: 400
+    font-style: normal
+    font-size: 2rem
+  &__button 
+    font-family: "Istok Web",sans-serif
+    font-weight: bold
+    font-style: normal
+    padding: 1.3rem 11rem
+    text-transform: uppercase
+    font-size: 1.6rem
+    font-weight: 700
+    font-stretch: normal
+    font-style: normal
+    line-height: 1.75
+    letter-spacing: .64px
+    text-align: center
+    border: none
+    color: #fff
+    background-color: #f60
+    margin-bottom: 1.8rem
+    cursor: pointer
+    outline: 0
     

@@ -1,5 +1,21 @@
 $(document).ready(function () {
   ("use strict");
+
+   let modal = $(".modal"),
+    //  modalBtn = $('[data-toggle="modal--visible"]');
+     closeBtn = $(".modal__button");
+
+   modal.on("click", function (e) {
+     if (modal.has(e.target).length === 0 || closeBtn.is(e.target)) {
+       modal.toggleClass("modal--visible");
+     }
+   });
+
+   $(document).keydown(function (e) {
+     if (e.keyCode === 27 && modal.closest("modal--visible").length) {
+       modal.toggleClass("modal--visible");
+     } 
+   });
   // scroll top
   $(function () {
     $(window).scroll(function () {
@@ -107,22 +123,9 @@ $(document).ready(function () {
     centeredSlides: true,
   });
 
-  // list open
-  let list = document.querySelector(".form__select");
-  list.addEventListener("click", (event) => {
-    let target = event.target;
-    let sub = document.querySelector(".select__sub");
-
-    if (target) {
-      sub.style.display = "block";
-    } else if (target) {
-      sub.style.display = "none";
-    }
-  });
-
   // youtube video
   let player;
-  let playerTwo;
+  let playerSecond;
   function videoPlay(event) {
     event.target.playVideo();
   }
@@ -138,49 +141,53 @@ $(document).ready(function () {
     });
   });
 
-  $(".other__wrapper").on("click", function onYouTubeIframeAPIReady() {
-    playerTwo = new YT.Player("player", {
+   function c(event) {
+     event.target.playVideo();
+   }
+
+  $(".slider__btn-first").on("click", function onYouTubeIframeAPIReady() {
+    playerSecond = new YT.Player("playerSecond", {
       height: "100%",
       width: "100%",
       videoId: "5566-IfmPKA",
       events: {
-        onReady: videoPlay,
+        onReady: c,
       },
     });
   });
 
-  $(".footer__form").validate({
-    errorClass: "invalid",
-    errorElement: "span",
-    errorPlacement: function (error, element) {
-      error.insertAfter($(element));
-    },
-    rules: {
-      userPhone: {
-      required: true,
-      minlength: 16,
+    $(".footer__form").validate({
+      errorClass: "invalid",
+      errorElement: "span",
+      errorPlacement: function (error, element) {
+        error.insertAfter($(element));
       },
-    },
-    
-    messages: {
-      userPhone: "Заполните поле"
-    },
-    submitHandler: function (form) {
-      $.ajax({
-        type: "POST",
-        url: "send.php",
-        data: $(form).serialize(),
-        success: function (response) {
-          console.log("Сработало!" + response);
-          // alert.toggleClass("alert--visible");
-          $(form)[0].reset();
+      rules: {
+        userPhone: {
+          required: true,
+          minlength: 16,
         },
-        error: function (response) {
-          console.log("Ошибка отправки.");
-        },
-      });
-    },
-  });
+      },
+
+      messages: {
+        userPhone: "Заполните поле",
+      },
+      submitHandler: function (form) {
+        $.ajax({
+          type: "POST",
+          url: "send.php",
+          data: $(form).serialize(),
+          success: function (response) {
+            console.log("Сработало!" + response);
+            $(form)[0].reset();
+            modal.removeClass("modal--visible");
+          },
+          error: function (response) {
+            console.log("Ошибка отправки.");
+          },
+        });
+      },
+    });
   // маска для телефона
   $("[type=tel]").mask("+7(000)000-00-00", {
     placeholder: "Ваш телефон",
@@ -197,5 +204,39 @@ $(document).ready(function () {
       x.style.display = "flex";
     }
   }
-  let 
+
+  // list
+  let list = document.querySelector(".select__list");
+  let select = document.querySelector(".select");
+  let items = document.querySelectorAll(".select__item");
+  let value = document.querySelectorAll(".select__value");
+
+  select.addEventListener("click", () => {
+    let target = event.target;
+    if(target) {
+      list.classList.toggle("inactive-list")
+    } 
+  })
+  
+  items.forEach((el, i) => {
+    el.addEventListener("click", (event) => {
+      let target = event.target;
+      if(target.matches(".select__item")) {
+        select.textContent = target.textContent;
+        list.classList.toggle("inactive-list");
+      }
+    });
+  });
+
+  // textvideo off
+  let videoBtn = document.querySelector(".video__btn");
+
+  videoBtn.addEventListener("click", () => {
+    let target = event.target;
+    let videoText = document.querySelector(".video__text-wrap");
+    if(target) {
+      videoText.style.display = "none";
+    }
+  });
+  
 });
