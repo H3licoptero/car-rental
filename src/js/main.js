@@ -150,11 +150,11 @@ $(document).ready(function () {
   });
 
   $(".footer__form").validate({
-    // errorClass: "invalid",
-    // errorElement: "span",
-    // errorPlacement: function (error, element) {
-    //   error.insertAfter($(element));
-    // },
+    errorClass: "invalid",
+    errorElement: "span",
+    errorPlacement: function (error, element) {
+      error.insertAfter($(element));
+    },
     rules: {
       userPhone: {
       required: true,
@@ -162,11 +162,8 @@ $(document).ready(function () {
       },
     },
     
-    message: {
-      userPhone: "Заполните поле",
-      //   userPhone: {
-      //     required: "Заполните поле"
-      // },
+    messages: {
+      userPhone: "Заполните поле"
     },
     submitHandler: function (form) {
       $.ajax({
@@ -188,4 +185,17 @@ $(document).ready(function () {
   $("[type=tel]").mask("+7(000)000-00-00", {
     placeholder: "Ваш телефон",
   });
+
+  let burger = document.querySelector(".burger")
+
+  burger.addEventListener("click", myFunction);
+  function myFunction() {
+    var x = document.querySelector(".mobile-container");
+    if (x.style.display === "flex") {
+      x.style.display = "none";
+    } else {
+      x.style.display = "flex";
+    }
+  }
+  
 });

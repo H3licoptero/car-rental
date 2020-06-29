@@ -24,13 +24,17 @@
               <a href="index.html" class="logo-text menu__logo-text">Ставрополье<br><span
                   class="text--primary logo__text--primary">на ладони</span></a>
             </div>
+            <div class="burger">
+              <img src="img/open-menu.svg" alt="menu" class="burger-logo">
+            </div>
             <!-- /.logo-wrapper -->
-            <nav class="nav menu__nav menu">
+            <nav class="nav menu__nav menu mobile-container">
               <a href="#terms" class="nav__item menu__item">Условия</a>
               <a href="#info" class="nav__item menu__item">Комплектация автомобиля</a>
               <a href="#questions" class="nav__item menu__item">Договор аренды</a>
               <a href="#contacts" class="nav__item menu__item">Контакты</a>
             </nav>
+        
             <!-- /.nav -->
           </div>
           <!-- /.menu -->
@@ -410,14 +414,18 @@
         <!-- /.title-box -->
         <div class="form-block footer__form-block">
           <form action="send.php" method="POST" class="form footer__form">
-            <!-- <ul class="select form__select">
+            <div class="select-block">
+              <!-- <button class="dropdown select" type="button">10 дней <span class="select__value">-20%</span></button> -->
+              <ul class="select form__select">
               <li class="select__option">10 дней <span class="select__value">-20%</span>
                 <ul class="select__sub">
-                  <li class="select__option">20 дней <span class="select__value">-30%</span></li>
-                  <li class="select__option">30 дней <span class="select__value">-35%</span></li>
+                  <li class="select__option select__sub-one">20 дней <span class="select__value">-30%</span></li>
+                  <li class="select__option select__sub-two">30 дней <span class="select__value">-35%</span></li>
                 </ul>
               </li>
-            </ul> -->
+            </ul>
+            </div>
+            
 
             <div class="input-block">
                <!-- <label class="form__label" for="form-input"></label> -->
@@ -451,7 +459,7 @@
                 <div class="contacts footer__contacts" id="contacts">
                   <h4 class="details__title">Контакты</h4>
                   <ul class="props__list">
-                    <li class="props__item"><a href="#" class="props__link">pupkinvvv@example.ru</a></li>
+                    <li class="props__item"><a href="mailto:mail.ru/" class="props__link">pupkinvvv@example.ru</a></li>
                     <li class="props__item"><a href="#questions" class="props__link">Договор аренды</a></li>
                     <li class="props__item"><a href="#terms" class="props__link">Условия</a></li>
                   </ul>
@@ -509,16 +517,23 @@
       <div class="container socials__container">
         <div class="social__box socials__social-box">
           <div class="icon__box socials__icon-box">
-            <img src="img/vk.svg" alt="vk" class="icon__image footer-icon">
+            <a href="https://www.vk.com/">
+            <img src="img/vk.svg" alt="vk" class="icon__image footer-icon"></a>
           </div>
           <div class="icon__box socials__icon-box">
+            <a href="https://www.youtube.com/">
             <img src="img/youtube.svg" alt="youtube" class="icon__image footer-icon">
+          </a>
+            
           </div>
           <div class="icon__box socials__icon-box">
-            <img src="img/whatsapp.svg" alt="whatsapp" class="icon__image footer-icon">
+            <a href="https://www.whatsapp.com/?lang=ru">
+            <img src="img/whatsapp.svg" alt="whatsapp" class="icon__image footer-icon"></a>
           </div>
           <div class="icon__box socials__icon-box">
-            <img src="img/mail.svg" alt="mail" class="icon__image footer-icon">
+            <a href="https://www.google.com/gmail/">
+            <img src="img/mail.svg" alt="mail" class="icon__image footer-icon"></a>
+            
           </div>
         </div>
         <div class="rights socials__rights">

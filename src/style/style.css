@@ -506,6 +506,19 @@ ul > li {
 .video__image-box {
   color: #dddddd; }
 
+.burger {
+  position: absolute;
+  display: flex;
+  top: 43px;
+  right: 29px;
+  width: 30px;
+  height: 30px; }
+
+.burger-logo {
+  cursor: pointer;
+  -webkit-filter: invert(1);
+  filter: invert(1); }
+
 .slider__section {
   display: flex;
   background-color: #f7f4f2; }
@@ -1377,6 +1390,9 @@ ul > li {
     max-width: 20px;
     height: 20px; }
 
+.input-block {
+  position: relative; }
+
 .invalid {
   color: red; }
 
@@ -2206,18 +2222,42 @@ span.invalid {
       font-size: 4rem;
       letter-spacing: normal; }
   .header__container {
-    max-width: 25rem;
+    max-width: 34rem;
     height: 16.6666rem;
     width: 100%;
-    margin-bottom: 1rem; }
+    margin-bottom: 1rem;
+    margin-left: 0;
+    margin-right: 0; }
   .header__menu {
-    max-width: 25rem;
+    display: flex;
+    width: 100%;
     flex-direction: column;
+    margin-top: 3rem;
+    margin-bottom: 0;
+    margin-left: 0;
+    margin-right: 0; }
+  .mobile-container {
+    display: none;
+    flex-direction: column;
+    align-items: flex-end;
+    max-width: 350px;
     margin: auto;
-    margin-top: 6.083333rem;
-    margin-bottom: 15rem; }
-  .menu__nav {
-    display: none; }
+    transition: all 0.3s ease-in; }
+  .menu {
+    max-width: 34rem;
+    transition: all 0.3s ease-in; }
+    .menu__nav {
+      margin-top: 1rem;
+      margin-right: 29px; }
+    .menu__item {
+      margin-right: 0;
+      color: #ffffff; }
+      .menu__item::after {
+        display: none; }
+    .menu__logo-text {
+      font-size: 2.171428rem; }
+    .menu__logo-wrapper {
+      margin-right: 70px; }
   .logo__header-image {
     width: 5rem; }
   .video__content {
