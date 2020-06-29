@@ -2,7 +2,6 @@ $(document).ready(function () {
   ("use strict");
 
    let modal = $(".modal"),
-    //  modalBtn = $('[data-toggle="modal--visible"]');
      closeBtn = $(".modal__button");
 
    modal.on("click", function (e) {
@@ -126,6 +125,10 @@ $(document).ready(function () {
   // youtube video
   let player;
   let playerSecond;
+  let playerThird;
+  let playerFourth;
+  let playerFifth;
+  
   function videoPlay(event) {
     event.target.playVideo();
   }
@@ -141,7 +144,7 @@ $(document).ready(function () {
     });
   });
 
-   function c(event) {
+   function second(event) {
      event.target.playVideo();
    }
 
@@ -151,11 +154,57 @@ $(document).ready(function () {
       width: "100%",
       videoId: "5566-IfmPKA",
       events: {
-        onReady: c,
+        onReady: second,
       },
     });
   });
 
+  function third(event) {
+    event.target.playVideo();
+  }
+
+  $(".slider__btn-second").on("click", function onYouTubeIframeAPIReady() {
+    playerThird = new YT.Player("playerThird", {
+      height: "100%",
+      width: "100%",
+      videoId: "5566-IfmPKA",
+      events: {
+        onReady: third,
+      },
+    });
+  });
+
+  function fourth(event) {
+    event.target.playVideo();
+  }
+
+  $(".slider__btn-third").on("click", function onYouTubeIframeAPIReady() {
+    playerFourth = new YT.Player("playerFourth", {
+      height: "100%",
+      width: "100%",
+      videoId: "5566-IfmPKA",
+      events: {
+        onReady: fourth,
+      },
+    });
+  });
+
+  function fifth(event) {
+    event.target.playVideo();
+  }
+
+  $(".slider__btn-fourth").on("click", function onYouTubeIframeAPIReady() {
+    playerFifth = new YT.Player("playerFifth", {
+      height: "100%",
+      width: "100%",
+      videoId: "5566-IfmPKA",
+      events: {
+        onReady: fifth,
+      },
+    });
+  });
+
+  // validate
     $(".footer__form").validate({
       errorClass: "invalid",
       errorElement: "span",

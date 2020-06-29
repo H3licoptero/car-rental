@@ -568,6 +568,18 @@ ul > li {
     margin: auto;
     z-index: 12;
     cursor: pointer; }
+  .slider__btn-second {
+    margin: auto;
+    z-index: 12;
+    cursor: pointer; }
+  .slider__btn-third {
+    margin: auto;
+    z-index: 12;
+    cursor: pointer; }
+  .slider__btn-fourth {
+    margin: auto;
+    z-index: 12;
+    cursor: pointer; }
 
 .other__wrapper {
   display: flex;
@@ -1446,41 +1458,42 @@ span.invalid {
     position: relative;
     max-width: 50rem;
     padding: 3rem 3rem;
-    color: #222;
-    background: #f7f4f2;
+    color: #222222;
+    background: #dddddd;
     background-size: cover; }
   .modal__title {
     margin-top: 2rem;
     text-align: center;
-    font-family: "Open Sans",sans-serif;
-    font-weight: 700;
+    font-family: "Open Sans", sans-serif;
+    font-weight: bold;
     font-style: normal;
     font-size: 3.6rem; }
   .modal__text {
     text-align: center;
-    font-family: "Open Sans",sans-serif;
-    font-weight: 400;
+    font-family: "Open Sans", sans-serif;
+    font-weight: normal;
     font-style: normal;
     font-size: 2rem; }
   .modal__button {
-    font-family: "Istok Web",sans-serif;
+    font-family: "Istok Web", sans-serif;
     font-weight: bold;
     font-style: normal;
     padding: 1.3rem 11rem;
     text-transform: uppercase;
     font-size: 1.6rem;
-    font-weight: 700;
+    font-weight: bold;
     font-stretch: normal;
     font-style: normal;
     line-height: 1.75;
-    letter-spacing: .64px;
+    letter-spacing: 0.64px;
     text-align: center;
     border: none;
-    color: #fff;
-    background-color: #f60;
+    color: #ffffff;
+    background-color: #ff6600;
     margin-bottom: 1.8rem;
     cursor: pointer;
-    outline: 0; }
+    outline: 0;
+    border-radius: 3px; }
 
 @media screen and (max-width: 1920px) {
   .menu__item {
@@ -1633,6 +1646,34 @@ span.invalid {
     right: 4rem; } }
 
 @media screen and (max-width: 992px) {
+  .menu__item:hover::after {
+    width: 100%; }
+  .other__wrapper {
+    position: relative; }
+    .other__wrapper:hover::before {
+      content: "";
+      position: absolute;
+      background: none;
+      background-color: none; }
+  .footer__button {
+    z-index: 0; }
+    .footer__button:after {
+      content: "";
+      position: absolute;
+      background: #c33722;
+      transition: 0.3s ease;
+      background: none;
+      opacity: 0;
+      z-index: -1;
+      border-radius: 3px; }
+    .footer__button:hover::after {
+      opacity: 0; }
+  .socials__icon-box:hover {
+    -webkit-filter: none;
+    filter: none; }
+  .props__link:hover {
+    color: #777777;
+    text-decoration: none; }
   .hero {
     min-height: 90vh; }
     .hero__container {
@@ -2110,7 +2151,20 @@ span.invalid {
   .button-top {
     position: fixed;
     top: 58rem;
-    right: 4rem; } }
+    right: 4rem; }
+  .modal {
+    max-width: 65rem; }
+    .modal__dialog {
+      max-width: 34rem; }
+    .modal__title {
+      font-size: 2.4rem;
+      font-weight: bold; }
+    .modal__button {
+      display: flex;
+      justify-content: center;
+      max-width: 22rem;
+      font-size: 1.2;
+      font-weight: bold; } }
 
 @media screen and (max-width: 576px) {
   .hero {
@@ -2322,7 +2376,20 @@ span.invalid {
   .button-top {
     position: fixed;
     top: 42rem;
-    right: 4rem; } }
+    right: 4rem; }
+  .modal {
+    max-width: 50rem; }
+    .modal__dialog {
+      max-width: 26rem; }
+    .modal__title {
+      font-size: 2.4rem;
+      font-weight: bold; }
+    .modal__button {
+      display: flex;
+      justify-content: center;
+      max-width: 22rem;
+      font-size: 1.2;
+      font-weight: bold; } }
 
 @media screen and (max-width: 375px) {
   .hero {
@@ -2564,4 +2631,17 @@ span.invalid {
   .button-top {
     position: fixed;
     top: 42rem;
-    right: 2rem; } }
+    right: 2rem; }
+  .modal {
+    max-width: 50rem; }
+    .modal__dialog {
+      max-width: 26rem; }
+    .modal__title {
+      font-size: 2.4rem;
+      font-weight: bold; }
+    .modal__button {
+      display: flex;
+      justify-content: center;
+      max-width: 22rem;
+      font-size: 1.2;
+      font-weight: bold; } }

@@ -173,6 +173,41 @@
       top: 58rem
       right: 4rem
 @media screen and ( max-width: 992px )
+  .menu
+    &__item
+      &:hover::after
+        width: 100%
+  .other
+    &__wrapper
+      position: relative
+      &:hover::before
+        content: ""
+        position: absolute
+        background: none
+        background-color: none
+  .footer
+    &__button
+      z-index: 0
+      &:after
+        content: ""
+        position: absolute
+        background: rgb(195,55,34)
+        transition: 0.3s ease
+        background: none
+        opacity: 0
+        z-index: -1
+        border-radius: 3px
+      &:hover::after
+        opacity: 0
+  .socials
+    &__icon-box
+      &:hover
+        filter: none    
+  .props
+    &__link
+      &:hover
+        color: $grey
+        text-decoration: none
   // hero
   .hero
     min-height: 90vh
@@ -719,6 +754,19 @@
     position: fixed
     top: 58rem
     right: 4rem  
+  .modal  
+    max-width: 65rem
+    &__dialog
+      max-width: 34rem
+    &__title
+      font-size: 2.4rem
+      font-weight: bold
+    &__button
+      display: flex
+      justify-content: center
+      max-width: 22rem
+      font-size: 1.2
+      font-weight: bold
   
 @media screen and ( max-width: 576px )
   // hero
@@ -960,6 +1008,19 @@
     position: fixed
     top: 42rem
     right: 4rem  
+  .modal
+    max-width: 50rem
+    &__dialog
+      max-width: 26rem
+    &__title
+      font-size: 2.4rem
+      font-weight: bold
+    &__button
+      display: flex
+      justify-content: center
+      max-width: 22rem
+      font-size: 1.2
+      font-weight: bold
 @media screen and ( max-width: 375px )  
   // hero
   .hero
@@ -1226,4 +1287,17 @@
     position: fixed
     top: 42rem
     right: 2rem
+  .modal
+    max-width: 50rem
+    &__dialog
+      max-width: 26rem
+    &__title
+      font-size: 2.4rem
+      font-weight: bold
+    &__button
+      display: flex
+      justify-content: center
+      max-width: 22rem
+      font-size: 1.2
+      font-weight: bold
  
