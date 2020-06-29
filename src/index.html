@@ -12,18 +12,18 @@
 <body>
   <main class="main">
     <div class="hero" id="top">
-      <header class="header">
+      <header class="header header__section">
         <div class="container header__container">
-          <div class="menu header__menu">
-            <div class="logo-wrapper menu__logo-wrapper">
-              <div class="logo menu__logo">
-                <a href="" class="logo__link"><img class="header-image logo__header-image" src="./img/logo.svg"
-                    alt="logo"></a>
-              </div>
-              <!-- /.logo -->
-              <a href="index.html" class="logo-text menu__logo-text">Ставрополье<br><span
-                  class="text--primary logo__text--primary">на ладони</span></a>
+          <div class="logo-wrapper menu__logo-wrapper">
+            <div class="logo menu__logo">
+              <a href="" class="logo__link"><img class="header-image logo__header-image" src="./img/logo.svg"
+                  alt="logo"></a>
             </div>
+            <!-- /.logo -->
+            <a href="index.html" class="logo-text menu__logo-text">Ставрополье<br><span
+                class="text--primary logo__text--primary">на ладони</span></a>
+          </div>
+          <div class="menu header__menu">
             <div class="burger">
               <img src="img/open-menu.svg" alt="menu" class="burger-logo">
             </div>
@@ -34,7 +34,6 @@
               <a href="#questions" class="nav__item menu__item">Договор аренды</a>
               <a href="#contacts" class="nav__item menu__item">Контакты</a>
             </nav>
-        
             <!-- /.nav -->
           </div>
           <!-- /.menu -->
@@ -59,7 +58,7 @@
               <div class="image-box video__image-box" id="player">
                 <script src="https://www.youtube.com/iframe_api">
                 </script>
-                <img class="btn video__btn" src="img/video-play.png" alt="video-play">
+                <img class="btn video__btn" src="img/video-play.svg" alt="video-play">
               </div>
             </div>
           </div>
@@ -414,19 +413,16 @@
         <!-- /.title-box -->
         <div class="form-block footer__form-block">
           <form action="send.php" method="POST" class="form footer__form">
-            <div class="select-block">
-              <!-- <button class="dropdown select" type="button">10 дней <span class="select__value">-20%</span></button> -->
-              <ul class="select form__select">
-              <li class="select__option">10 дней <span class="select__value">-20%</span>
-                <ul class="select__sub">
-                  <li class="select__option select__sub-one">20 дней <span class="select__value">-30%</span></li>
-                  <li class="select__option select__sub-two">30 дней <span class="select__value">-35%</span></li>
+            <div class="select select__block">
+              <div class=" select__option">10 дней<span class="select__value">-20%</span></div>
+                <ul class="select__list">
+                  <li class="select__item">20 дней<span class="select__value">-30%</span></li>
+                  <li class="select__item">20 дней<span class="select__value">-30%</li>
                 </ul>
-              </li>
-            </ul>
+              <!-- <div class="select__option select__sub-one">20 дней<span class="select__value">-30%</span></div> -->
+                  <!-- <div class="select__option select__sub-two">30 дней <span class="select__value">-35%</span></div> -->
             </div>
             
-
             <div class="input-block">
                <!-- <label class="form__label" for="form-input"></label> -->
                <input class="input form__input" name="userPhone" type="tel" placeholder="Ваш телефон" id="form-input">

@@ -197,5 +197,5 @@ $(document).ready(function () {
       x.style.display = "flex";
     }
   }
-  
+  let 
 });

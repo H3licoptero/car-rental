@@ -166,7 +166,6 @@
   // hero
   .hero
     min-height: 90vh
-    // height: 14.583333rem
     &__container
       max-width: 50rem
     &__title
@@ -175,18 +174,51 @@
       font-size: 4.5rem
       letter-spacing: normal
   .header
-    &__conatiner
-      max-width: 25rem
+    &__container
+      position: relative
+      display: flex
+      align-items: center
       width: 100%
-    &__menu
-      max-width: 25rem
-      flex-direction: column
-      margin: auto
-      margin-top: 6.083333rem
+      max-width: 604px
       margin-bottom: 15rem
+    &__menu
+      // max-width: 25rem
+      flex-direction: column
+  //  burger-menu
+  .burger
+    display: flex
+    width: 30px
+    height: 30px
+  .burger-logo
+    cursor: pointer
+    filter: invert(1)
+  .mobile-container 
+    display: none
+    flex-direction: column
+    align-items: center
+    max-width: 350px
+    margin: auto
+    transition: 0.3s
   .menu
+    max-width: 34rem
+    transition: 0.3s
+    &__nav
+      margin-top: 1rem
+      margin-right: 29px
+    &__item
+      margin-right: 0
+      color: $light
+      &::after
+        display: none
+    &__logo-wrapper
+      max-width: 
+  .menu
+    position: relative
     &__nav
       display: none
+      position: absolute
+      top: 2rem
+      width: 185px
   .logo
     &__header-image
       width: 5rem
@@ -428,7 +460,6 @@
   // hero
   .hero
     min-height: 90vh
-    // height: 14.583333rem
     &__container
       max-width: 43rem
     &__title
@@ -438,20 +469,19 @@
       letter-spacing: normal
   .header
     &__container
-      max-width: 25rem
+      max-width: 496px
       width: 100%
     &__menu
       max-width: 25rem
       flex-direction: column
-      margin: auto
-      margin-top: 6.083333rem
-      margin-bottom: 15rem
+  .mobile-container
+    align-items: flex-end
   .menu
     &__nav
       display: none
-  .logo
-    &__header-image
-      width: 5rem
+      position: absolute
+      margin-right: 0
+      right: -3px
   .video
     &__content
       max-width: 36.25rem
@@ -680,33 +710,24 @@
   // hero
   .hero
     min-height: 120vh
-    // height: 14.583333rem
     &__container
       margin-bottom: 1rem
-      max-width: 26.66666rem
-    &__title
+      &__title
       max-width: 25.5rem
       width: 100%
       font-size: 4.5rem
       letter-spacing: normal
   .header
     &__container
-      max-width: 25rem
+      max-width: 360px
       width: 100%
-      height: 200px
-      margin-bottom: 1rem
+      margin-bottom: 15rem
     &__menu
       max-width: 25rem
       flex-direction: column
-      margin: auto
-      margin-top: 6.083333rem
-      margin-bottom: 15rem
   .menu
     &__nav
       display: none
-  .logo
-    &__header-image
-      width: 5rem
   .video
     &__content
       max-width: 26.25rem
@@ -939,35 +960,36 @@
       letter-spacing: normal
   .header
     &__container
-      max-width: 34rem
-      height: 16.6666rem
+      display: flex
+      justify-content: space-between
+      align-items: center
       width: 100%
-      margin-bottom: 1rem
-      margin-left: 0
-      margin-right: 0 
+      max-width: 300px
+      margin-bottom: 10rem
     &__menu
       display: flex
       width: 100%
-      // max-width: 25rem
       flex-direction: column
-      // margin: auto
-      margin-top: 3rem
       margin-bottom: 0
       margin-left: 0
       margin-right: 0 
+  .burger
+    display: flex
+    width: 30px
+    height: 30px
+  .burger-logo
+    cursor: pointer
+    filter: invert(1)
   .mobile-container 
     display: none
     flex-direction: column
     align-items: flex-end
-    max-width: 350px
     margin: auto
-    transition: all 0.3s ease-in
   .menu
     max-width: 34rem
-    transition: all 0.3s ease-in
     &__nav
       margin-top: 1rem
-      margin-right: 29px
+      margin-right: 22px
     &__item
       margin-right: 0
       color: $light
@@ -975,11 +997,9 @@
         display: none
     &__logo-text
       font-size: 2.171428rem
-    &__logo-wrapper 
-      margin-right: 70px
-  .logo
-    &__header-image
-      width: 5rem
+  .logo__header-image 
+    max-width: 3.857142rem
+    height: 3.857142rem
   .video
     &__content
       max-width: 22.25rem
@@ -1194,3 +1214,4 @@
     position: fixed
     top: 42rem
     right: 2rem
+ 

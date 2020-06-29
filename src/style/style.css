@@ -347,7 +347,8 @@ html {
 body {
   font-family: "Open Sans", sans-serif;
   font-size: 1rem;
-  font-weight: normal; }
+  font-weight: normal;
+  overflow-x: none; }
 
 img {
   max-width: 100%;
@@ -404,15 +405,17 @@ ul > li {
   position: relative;
   display: flex; }
   .header__container {
+    justify-content: space-between;
+    display: flex;
     max-width: 1692px;
-    width: 100%; }
+    width: 100%;
+    margin-top: 87px;
+    margin-bottom: 53px; }
 
 .menu {
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  margin-top: 6.142857rem;
-  margin-bottom: 3.7857142rem; }
+  align-items: center; }
   .menu__logo {
     margin-right: 1.571428rem; }
   .menu__logo-wrapper {
@@ -425,9 +428,9 @@ ul > li {
     font-family: "Istok Web",sans-serif;
     font-size: 2.571428rem;
     font-weight: bold;
-    line-height: 1.33;
     color: #ffffff; }
   .menu__nav {
+    height: 61px;
     align-items: center; }
 
 .logo__text--primary {
@@ -438,7 +441,7 @@ ul > li {
 
 .logo__header-image {
   max-width: 4.857142rem;
-  height: 100%; }
+  height: 4.57142rem; }
 
 .nav__item {
   margin-right: 4.071428rem;
@@ -466,7 +469,7 @@ ul > li {
     left: -49px;
     width: 112%;
     height: 100%;
-    background: url("../img/bg-image.png");
+    background: url("../img/bg-image.png") center/cover;
     background-repeat: no-repeat; }
 
 .video__title {
@@ -507,17 +510,7 @@ ul > li {
   color: #dddddd; }
 
 .burger {
-  position: absolute;
-  display: flex;
-  top: 43px;
-  right: 29px;
-  width: 30px;
-  height: 30px; }
-
-.burger-logo {
-  cursor: pointer;
-  -webkit-filter: invert(1);
-  filter: invert(1); }
+  display: none; }
 
 .slider__section {
   display: flex;
@@ -1175,12 +1168,12 @@ ul > li {
   cursor: pointer; }
   .select__span {
     font-size: 16px; }
-  .select__sub {
+  .select__list {
     position: absolute;
     display: none;
     padding-left: 0;
     cursor: pointer; }
-    .select__sub:hover {
+    .select__list:hover {
       display: block;
       transition: 0.3s ease; }
   .select__value {
@@ -1553,17 +1546,48 @@ span.invalid {
       width: 100%;
       font-size: 4.5rem;
       letter-spacing: normal; }
-  .header__conatiner {
-    max-width: 25rem;
-    width: 100%; }
-  .header__menu {
-    max-width: 25rem;
-    flex-direction: column;
-    margin: auto;
-    margin-top: 6.083333rem;
+  .header__container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 604px;
     margin-bottom: 15rem; }
-  .menu__nav {
-    display: none; }
+  .header__menu {
+    flex-direction: column; }
+  .burger {
+    display: flex;
+    width: 30px;
+    height: 30px; }
+  .burger-logo {
+    cursor: pointer;
+    -webkit-filter: invert(1);
+    filter: invert(1); }
+  .mobile-container {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    max-width: 350px;
+    margin: auto;
+    transition: 0.3s; }
+  .menu {
+    max-width: 34rem;
+    transition: 0.3s; }
+    .menu__nav {
+      margin-top: 1rem;
+      margin-right: 29px; }
+    .menu__item {
+      margin-right: 0;
+      color: #ffffff; }
+      .menu__item::after {
+        display: none; }
+  .menu {
+    position: relative; }
+    .menu__nav {
+      display: none;
+      position: absolute;
+      top: 2rem;
+      width: 185px; }
   .logo__header-image {
     width: 5rem; }
   .video__content {
@@ -1783,18 +1807,18 @@ span.invalid {
       font-size: 4.5rem;
       letter-spacing: normal; }
   .header__container {
-    max-width: 25rem;
+    max-width: 496px;
     width: 100%; }
   .header__menu {
     max-width: 25rem;
-    flex-direction: column;
-    margin: auto;
-    margin-top: 6.083333rem;
-    margin-bottom: 15rem; }
+    flex-direction: column; }
+  .mobile-container {
+    align-items: flex-end; }
   .menu__nav {
-    display: none; }
-  .logo__header-image {
-    width: 5rem; }
+    display: none;
+    position: absolute;
+    margin-right: 0;
+    right: -3px; }
   .video__content {
     max-width: 36.25rem;
     min-height: 20.583333rem;
@@ -1995,27 +2019,19 @@ span.invalid {
     min-height: 120vh; }
     .hero__container {
       margin-bottom: 1rem;
-      max-width: 26.66666rem; }
-    .hero__title {
       max-width: 25.5rem;
       width: 100%;
       font-size: 4.5rem;
       letter-spacing: normal; }
   .header__container {
-    max-width: 25rem;
+    max-width: 360px;
     width: 100%;
-    height: 200px;
-    margin-bottom: 1rem; }
+    margin-bottom: 15rem; }
   .header__menu {
     max-width: 25rem;
-    flex-direction: column;
-    margin: auto;
-    margin-top: 6.083333rem;
-    margin-bottom: 15rem; }
+    flex-direction: column; }
   .menu__nav {
     display: none; }
-  .logo__header-image {
-    width: 5rem; }
   .video__content {
     max-width: 26.25rem;
     width: 100%;
@@ -2222,33 +2238,37 @@ span.invalid {
       font-size: 4rem;
       letter-spacing: normal; }
   .header__container {
-    max-width: 34rem;
-    height: 16.6666rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     width: 100%;
-    margin-bottom: 1rem;
-    margin-left: 0;
-    margin-right: 0; }
+    max-width: 300px;
+    margin-bottom: 10rem; }
   .header__menu {
     display: flex;
     width: 100%;
     flex-direction: column;
-    margin-top: 3rem;
     margin-bottom: 0;
     margin-left: 0;
     margin-right: 0; }
+  .burger {
+    display: flex;
+    width: 30px;
+    height: 30px; }
+  .burger-logo {
+    cursor: pointer;
+    -webkit-filter: invert(1);
+    filter: invert(1); }
   .mobile-container {
     display: none;
     flex-direction: column;
     align-items: flex-end;
-    max-width: 350px;
-    margin: auto;
-    transition: all 0.3s ease-in; }
+    margin: auto; }
   .menu {
-    max-width: 34rem;
-    transition: all 0.3s ease-in; }
+    max-width: 34rem; }
     .menu__nav {
       margin-top: 1rem;
-      margin-right: 29px; }
+      margin-right: 22px; }
     .menu__item {
       margin-right: 0;
       color: #ffffff; }
@@ -2256,10 +2276,9 @@ span.invalid {
         display: none; }
     .menu__logo-text {
       font-size: 2.171428rem; }
-    .menu__logo-wrapper {
-      margin-right: 70px; }
   .logo__header-image {
-    width: 5rem; }
+    max-width: 3.857142rem;
+    height: 3.857142rem; }
   .video__content {
     max-width: 22.25rem;
     min-height: 12.583333rem;

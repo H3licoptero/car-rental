@@ -32,14 +32,16 @@
   position: relative
   display: flex
   &__container
+    justify-content: space-between
+    display: flex
     max-width: 1692px
     width: 100%
+    margin-top: 87px
+    margin-bottom: 53px
 .menu
   display: flex
   justify-content: space-between
   align-items: center
-  margin-top: 6.142857rem
-  margin-bottom: 3.7857142rem 
   &__logo
     margin-right: 1.571428rem
   &__logo-wrapper
@@ -52,9 +54,10 @@
     font-family: "Istok Web",sans-serif
     font-size: 2.571428rem
     font-weight: bold
-    line-height: 1.33
+    // line-height: 1.33
     color: $light
   &__nav
+    height: 61px
     align-items: center
 .logo
   &__text--primary
@@ -64,7 +67,7 @@
     color: $primary
   &__header-image
     max-width: 4.857142rem
-    height: 100%
+    height: 4.57142rem
 .nav
   &__item
     margin-right: 4.071428rem
@@ -92,7 +95,7 @@
       left: -49px
       width: 112% 
       height: 100%
-      background: url('../img/bg-image.png') 
+      background: url('../img/bg-image.png') center / cover
       background-repeat: no-repeat
   &__title
     margin-bottom: 0
@@ -127,12 +130,4 @@
     // display: flex
     color: $primary
 .burger
-  position: absolute
-  display: flex
-  top: 43px
-  right: 29px
-  width: 30px
-  height: 30px
-.burger-logo
-  cursor: pointer
-  filter: invert(1)
+  display: none
