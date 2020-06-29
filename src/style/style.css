@@ -1181,6 +1181,7 @@ ul > li {
     display: block; }
 
 .form__input {
+  width: 100%;
   margin-bottom: 3.4142rem;
   padding: 10px 0;
   font-family: "Open Sans", sans-serif;
@@ -1375,6 +1376,16 @@ ul > li {
   .button-top__image {
     max-width: 20px;
     height: 20px; }
+
+.invalid {
+  color: red; }
+
+span.invalid {
+  position: absolute;
+  top: 50px;
+  left: 0;
+  margin: 0;
+  padding: 0; }
 
 @media screen and (max-width: 1920px) {
   .menu__item {

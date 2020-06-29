@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 
 <head>
   <meta charset="UTF-8">
@@ -409,18 +409,21 @@
         </div>
         <!-- /.title-box -->
         <div class="form-block footer__form-block">
-          <form action="#" method="" class="form footer__form">
-            <ul class="select form__select">
+          <form action="send.php" method="POST" class="form footer__form">
+            <!-- <ul class="select form__select">
               <li class="select__option">10 дней <span class="select__value">-20%</span>
                 <ul class="select__sub">
                   <li class="select__option">20 дней <span class="select__value">-30%</span></li>
                   <li class="select__option">30 дней <span class="select__value">-35%</span></li>
                 </ul>
               </li>
-            </ul>
-            <label class="form__label" for=""></label>
-            <input class="input form__input" type="text" placeholder="Ваш телефон">
-            <button class="button footer__button">Заказать</button>
+            </ul> -->
+
+            <div class="input-block">
+               <!-- <label class="form__label" for="form-input"></label> -->
+               <input class="input form__input" name="userPhone" type="tel" placeholder="Ваш телефон" id="form-input">
+            </div>
+            <button type="submit" class="button footer__button">Заказать</button>
           </form>
           <span class="footer__promocode">А у меня есть промокод!</span>
         </div>
@@ -535,6 +538,8 @@
 
   <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
   <script src="js/swiper.min.js"></script>
+  <script src="js/jquery.validate.min.js"></script>
+  <script src="js/jquery.mask.min.js"></script>
   <script src="js/main.js"></script>
 </body>
 

@@ -122,7 +122,7 @@ $(document).ready(function () {
 
   // youtube video
   let player;
-  let playerTwo
+  let playerTwo;
   function videoPlay(event) {
     event.target.playVideo();
   }
@@ -147,5 +147,45 @@ $(document).ready(function () {
         onReady: videoPlay,
       },
     });
+  });
+
+  $(".footer__form").validate({
+    // errorClass: "invalid",
+    // errorElement: "span",
+    // errorPlacement: function (error, element) {
+    //   error.insertAfter($(element));
+    // },
+    rules: {
+      userPhone: {
+      required: true,
+      minlength: 16,
+      },
+    },
+    
+    message: {
+      userPhone: "Заполните поле",
+      //   userPhone: {
+      //     required: "Заполните поле"
+      // },
+    },
+    submitHandler: function (form) {
+      $.ajax({
+        type: "POST",
+        url: "send.php",
+        data: $(form).serialize(),
+        success: function (response) {
+          console.log("Сработало!" + response);
+          // alert.toggleClass("alert--visible");
+          $(form)[0].reset();
+        },
+        error: function (response) {
+          console.log("Ошибка отправки.");
+        },
+      });
+    },
+  });
+  // маска для телефона
+  $("[type=tel]").mask("+7(000)000-00-00", {
+    placeholder: "Ваш телефон",
   });
 });
