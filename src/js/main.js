@@ -180,7 +180,7 @@ $(document).ready(function () {
           success: function (response) {
             console.log("Сработало!" + response);
             $(form)[0].reset();
-            modal.removeClass("modal--visible");
+            modal.toggleClass("modal--visible");
           },
           error: function (response) {
             console.log("Ошибка отправки.");
