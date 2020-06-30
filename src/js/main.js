@@ -218,7 +218,7 @@ $(document).ready(function () {
     rules: {
       userPhone: {
         required: true,
-        minlength: 16,
+        minlength: 18,
       },
     },
     messages: {
