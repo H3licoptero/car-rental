@@ -2,7 +2,33 @@ $(document).ready(function () {
   "use strict";
 
   let modal = $(".modal"),
-    closeBtn = $(".modal__button");
+    thanks = document.querySelector(".modal"),
+    visi = document.querySelector(".modal--visible"),
+    closeBtn = $(".modal__button"); 
+  let popup = document.querySelector(".popup"),
+    popupBtn = document.querySelector(".popup__button"),
+    close = document.querySelector(".popup__close"),
+    code = document.querySelector(".footer__promocode");
+
+    code.addEventListener("click", () => {
+      let target = event.target;
+      if(target) {
+        popup.classList.toggle("popup--visible");
+      }
+    });
+
+    document.addEventListener("keydown", (event) => {
+      if (event.keyCode === 27 && popup.matches(".popup--visible")) {
+        popup.classList.toggle("popup--visible");
+      }
+    });
+
+    popup.addEventListener("click",  (event) => {
+      let target = event.target;
+      if (target.matches(".popup") || target.closest(".popup__close")) {
+        popup.classList.toggle("popup--visible");
+      }
+    });
 
   modal.on("click", function (e) {
     if (modal.has(e.target).length === 0 || closeBtn.is(e.target)) {
@@ -10,11 +36,11 @@ $(document).ready(function () {
     }
   });
 
-  $(document).keydown(function (e) {
-    if (e.keyCode === 27 && modal.closest("modal--visible").length) {
-      modal.toggleClass("modal--visible");
-    }
-  });
+   document.addEventListener("keydown", (event) => {
+     if (event.keyCode === 27 && thanks.matches(".modal--visible")) {
+       thanks.classList.toggle("modal--visible");
+     }
+   });
   // scroll top
   $(function () {
     $(window).scroll(function () {
@@ -218,7 +244,7 @@ $(document).ready(function () {
     },
   });
   // маска для телефона
-  $("[type=tel]").mask("+7(000)000-00-00", {
+  $("[type=tel]").mask("+7 (000) 000-00-00", {
     placeholder: "Ваш телефон",
   });
 
@@ -250,8 +276,6 @@ $(document).ready(function () {
   items.forEach((el, i) => {
     el.addEventListener("click", (event) => {
       let target = event.target;
-      console.log(target.innerHTML);
-      
       if (target.matches(".select__item")) {
         select.innerHTML = target.innerHTML;
         list.classList.toggle("inactive-list");
