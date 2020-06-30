@@ -221,7 +221,6 @@ $(document).ready(function () {
         minlength: 16,
       },
     },
-
     messages: {
       userPhone: "Заполните поле",
     },
@@ -235,7 +234,7 @@ $(document).ready(function () {
           $(form)[0].reset();
           modal.toggleClass("modal--visible");
           ym(65264992, "reachGoal", "request");
-          return true;
+          // return true;
         },
         error: function (response) {
           console.log("Ошибка отправки.");
@@ -297,31 +296,31 @@ $(document).ready(function () {
   let block = document.createElement("iframe");
   block.setAttribute(
     "src",
-    "https://www.youtube.com/embed/BkGFhBypWrc",
+    "https://www.youtube.com/embed/BkGFhBypWrc?rel=0&mute=1&autoplay=1",
     "allow",
     "accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture",
     "allowfullscreen"
   );
 
   // console.log(block);
-  let frame = document.querySelector(".frame");
-  let btnVideo = document.querySelector(".slider__btn");
+  // let frame = document.querySelector(".frame");
+  // let btnVideo = document.querySelector(".slider__btn");
 
-  btnVideo.addEventListener("click", startLazyBlock);
+  // btnVideo.addEventListener("click", startLazyBlock);
   
-  function startLazyBlock() {
-    if (!frameLoaded) {
-      let block = document.createElement("iframe");
-      block.setAttribute(
-        "src",
-        "https://www.youtube.com/embed/BkGFhBypWrc",
-        "allow",
-        "accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture",
-        "allowfullscreen"
-      );
+  // function startLazyBlock() {
+  //   if (!frameLoaded) {
+  //     let block = document.createElement("iframe");
+  //     block.setAttribute(
+  //       "src",
+  //       "https://www.youtube.com/embed/BkGFhBypWrc?autoplay=1",
+  //       "allow",
+  //       "accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture",
+  //       "allowfullscreen"
+  //     );
       
-      frameLoaded = true;
-      console.log(block);
-    }
-  }
+  //     frameLoaded = true;
+  //     console.log(block);
+  //   }
+  // }
 });
