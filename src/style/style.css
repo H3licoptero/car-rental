@@ -728,7 +728,15 @@ ul > li {
   max-width: 14.071428rem; }
   .cards__wrapper {
     display: flex;
-    justify-content: space-around; }
+    justify-content: center; }
+  .cards__box {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    flex-direction: row;
+    flex-wrap: wrap;
+    max-width: 48rem;
+    margin-bottom: 2rem; }
 
 .promo {
   background-color: #f7f4f2; }
@@ -1724,6 +1732,7 @@ span.invalid {
       margin-right: 29px; }
     .menu__item {
       margin-right: 0;
+      margin-bottom: 1rem;
       color: #ffffff; }
       .menu__item::after {
         display: none; }
@@ -1782,8 +1791,6 @@ span.invalid {
     flex-wrap: wrap;
     margin: auto;
     max-width: 55rem; }
-  .reviews__cards {
-    margin-right: 5.66666rem; }
   .promo__content {
     flex-direction: column;
     max-width: 32rem;
@@ -2009,8 +2016,6 @@ span.invalid {
     flex-direction: row;
     flex-wrap: wrap;
     margin: auto; }
-  .reviews__cards {
-    margin-right: 5.66666rem; }
   .promo__content {
     flex-direction: column;
     max-width: 32rem;
@@ -2273,7 +2278,7 @@ span.invalid {
   .info__container {
     flex-direction: column; }
   .info__wrap-first {
-    max-width: 21rem;
+    max-width: 24rem;
     width: 100%;
     margin: auto; }
   .info__wrap-second {
@@ -2289,12 +2294,13 @@ span.invalid {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    width: 100%; }
+    width: 100%;
+    max-width: 16rem; }
   .complete__docs {
     justify-content: center;
     margin-right: 0;
     width: 100%;
-    max-width: 21rem;
+    max-width: 16rem;
     margin: auto;
     margin-bottom: 4rem; }
   .complete__components {
@@ -2304,6 +2310,12 @@ span.invalid {
     max-width: 20.41666rem; }
   .docs__text {
     max-width: 16.66666rem; }
+  .docs__title {
+    margin-right: 2rem; }
+  .icon__box {
+    padding: 13px; }
+  .icon__block {
+    padding: 15px; }
   .section__footer {
     display: flex;
     flex-direction: column;
@@ -2530,7 +2542,7 @@ span.invalid {
   .info__container {
     flex-direction: column; }
   .info__wrap-first {
-    max-width: 28.08333rem;
+    max-width: 26.08333rem;
     width: 100%;
     margin-right: 0; }
   .info__wrap-second {
@@ -2541,6 +2553,8 @@ span.invalid {
   .transmission {
     justify-content: center;
     padding: 47px 7px; }
+  .wrap-first__box-title {
+    max-width: 23rem; }
   .complete__wrap-second {
     display: flex;
     flex-direction: column;
@@ -2581,7 +2595,8 @@ span.invalid {
   .footer__form {
     max-width: 24rem;
     margin-right: 0;
-    margin: auto; }
+    margin: auto;
+    margin-bottom: 1rem; }
   .footer__total {
     margin-bottom: 10rem; }
   .footer__details {
