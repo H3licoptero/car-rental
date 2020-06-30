@@ -1,20 +1,20 @@
 $(document).ready(function () {
   ("use strict");
 
-   let modal = $(".modal"),
-     closeBtn = $(".modal__button");
+  let modal = $(".modal"),
+    closeBtn = $(".modal__button");
 
-   modal.on("click", function (e) {
-     if (modal.has(e.target).length === 0 || closeBtn.is(e.target)) {
-       modal.toggleClass("modal--visible");
-     }
-   });
+  modal.on("click", function (e) {
+    if (modal.has(e.target).length === 0 || closeBtn.is(e.target)) {
+      modal.toggleClass("modal--visible");
+    }
+  });
 
-   $(document).keydown(function (e) {
-     if (e.keyCode === 27 && modal.closest("modal--visible").length) {
-       modal.toggleClass("modal--visible");
-     } 
-   });
+  $(document).keydown(function (e) {
+    if (e.keyCode === 27 && modal.closest("modal--visible").length) {
+      modal.toggleClass("modal--visible");
+    }
+  });
   // scroll top
   $(function () {
     $(window).scroll(function () {
@@ -124,11 +124,7 @@ $(document).ready(function () {
 
   // youtube video
   let player;
-  let playerSecond;
-  let playerThird;
-  let playerFourth;
-  let playerFifth;
-  
+
   function videoPlay(event) {
     event.target.playVideo();
   }
@@ -144,107 +140,88 @@ $(document).ready(function () {
     });
   });
 
-   function second(event) {
-     event.target.playVideo();
-   }
+  let firstBtn = $(".slider__btn-first");
+  let secondBtn = $(".slider__btn-second");
+  let thirdBtn = $(".slider__btn-third");
+  let fourthBtn = $(".slider__btn-fourth");
 
-  $(".slider__btn-first").on("click", function onYouTubeIframeAPIReady() {
-    playerSecond = new YT.Player("playerSecond", {
-      height: "100%",
-      width: "100%",
-      videoId: "5566-IfmPKA",
-      events: {
-        onReady: second,
-      },
-    });
+  $(firstBtn).on("click", function () {
+    let frame = $(".frame__first");
+    console.log(frame);
+    if (firstBtn) {
+      frame.css({ position: "unset" });
+      firstBtn.css({ display: "none" });
+    }
   });
 
-  function third(event) {
-    event.target.playVideo();
-  }
-
-  $(".slider__btn-second").on("click", function onYouTubeIframeAPIReady() {
-    playerThird = new YT.Player("playerThird", {
-      height: "100%",
-      width: "100%",
-      videoId: "5566-IfmPKA",
-      events: {
-        onReady: third,
-      },
-    });
+  $(secondBtn).on("click", function () {
+    let frame = $(".frame__second");
+    console.log(frame);
+    if (secondBtn) {
+      frame.css({ position: "unset" });
+      secondBtn.css({ display: "none" });
+    }
   });
 
-  function fourth(event) {
-    event.target.playVideo();
-  }
-
-  $(".slider__btn-third").on("click", function onYouTubeIframeAPIReady() {
-    playerFourth = new YT.Player("playerFourth", {
-      height: "100%",
-      width: "100%",
-      videoId: "5566-IfmPKA",
-      events: {
-        onReady: fourth,
-      },
-    });
+  $(thirdBtn).on("click", function () {
+    let frame = $(".frame__third");
+    console.log(frame);
+    if (thirdBtn) {
+      frame.css({ position: "unset" });
+      thirdBtn.css({ display: "none" });
+    }
   });
 
-  function fifth(event) {
-    event.target.playVideo();
-  }
-
-  $(".slider__btn-fourth").on("click", function onYouTubeIframeAPIReady() {
-    playerFifth = new YT.Player("playerFifth", {
-      height: "100%",
-      width: "100%",
-      videoId: "5566-IfmPKA",
-      events: {
-        onReady: fifth,
-      },
-    });
+  $(fourthBtn).on("click", function () {
+    let frame = $(".frame__fourth");
+    console.log(frame);
+    if (fourthBtn) {
+      frame.css({ position: "unset" });
+      fourthBtn.css({ display: "none" });
+    }
   });
 
   // validate
-    $(".footer__form").validate({
-      errorClass: "invalid",
-      errorElement: "span",
-      errorPlacement: function (error, element) {
-        error.insertAfter($(element));
+  $(".footer__form").validate({
+    errorClass: "invalid",
+    errorElement: "span",
+    errorPlacement: function (error, element) {
+      error.insertAfter($(element));
+    },
+    rules: {
+      userPhone: {
+        required: true,
+        minlength: 16,
       },
-      rules: {
-        userPhone: {
-          required: true,
-          minlength: 16,
-        },
-      },
+    },
 
-      messages: {
-        userPhone: "Заполните поле",
-      },
-      submitHandler: function (form) {
-        $.ajax({
-          type: "POST",
-          url: "send.php",
-          data: $(form).serialize(),
-          success: function (response) {
-            console.log("Сработало!" + response);
-            $(form)[0].reset();
-            modal.toggleClass("modal--visible");
-            ym(65264992, "reachGoal", "request");
-            return true;
-          },
-          error: function (response) {
-            console.log("Ошибка отправки.");
-          },
-        });
-      },
-    });
+    messages: {
+      userPhone: "Заполните поле",
+    },
+    submitHandler: function (form) {
+      $.ajax({
+        type: "POST",
+        url: "send.php",
+        data: $(form).serialize(),
+        success: function (response) {
+          console.log("Сработало!" + response);
+          $(form)[0].reset();
+          modal.toggleClass("modal--visible");
+          ym(65264992, "reachGoal", "request");
+          return true;
+        },
+        error: function (response) {
+          console.log("Ошибка отправки.");
+        },
+      });
+    },
+  });
   // маска для телефона
   $("[type=tel]").mask("+7(000)000-00-00", {
     placeholder: "Ваш телефон",
   });
 
-  let burger = document.querySelector(".burger")
+  let burger = document.querySelector(".burger");
 
   burger.addEventListener("click", myFunction);
   function myFunction() {
@@ -264,15 +241,15 @@ $(document).ready(function () {
 
   select.addEventListener("click", () => {
     let target = event.target;
-    if(target) {
-      list.classList.toggle("inactive-list")
-    } 
-  })
-  
+    if (target) {
+      list.classList.toggle("inactive-list");
+    }
+  });
+
   items.forEach((el, i) => {
     el.addEventListener("click", (event) => {
       let target = event.target;
-      if(target.matches(".select__item")) {
+      if (target.matches(".select__item")) {
         select.textContent = target.textContent;
         list.classList.toggle("inactive-list");
       }
@@ -285,9 +262,8 @@ $(document).ready(function () {
   videoBtn.addEventListener("click", () => {
     let target = event.target;
     let videoText = document.querySelector(".video__text-wrap");
-    if(target) {
+    if (target) {
       videoText.style.display = "none";
     }
   });
-  
 });
