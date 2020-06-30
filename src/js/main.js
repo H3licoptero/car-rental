@@ -250,8 +250,10 @@ $(document).ready(function () {
   items.forEach((el, i) => {
     el.addEventListener("click", (event) => {
       let target = event.target;
+      console.log(target.innerHTML);
+      
       if (target.matches(".select__item")) {
-        select.textContent = target.textContent;
+        select.innerHTML = target.innerHTML;
         list.classList.toggle("inactive-list");
       }
     });
