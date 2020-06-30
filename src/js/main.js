@@ -20,6 +20,7 @@ $(document).ready(function () {
     $(window).scroll(function () {
       if ($(window).scrollTop() > 300) {
         $(".button-top").fadeIn();
+        // $(".")
       } else {
         $(".button-top").fadeOut();
       }

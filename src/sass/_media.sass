@@ -98,7 +98,8 @@
       border-radius: 3px
   .video
     &__content
-      max-width: 71.28573rem
+      max-width: 61.28573rem
+      min-height: 31.14285rem  
       &::before
         background-size: cover
   .block
@@ -283,7 +284,7 @@
         background-size: cover 
     &__text-wrap
       top: -9.16666rem
-      left: -3px
+      left: 19px
   // блок внутри block__other
   // меняет ширину контейнера для изображения  
   // slider section
@@ -291,11 +292,14 @@
     &__container
       flex-direction: column
       margin: auto  
-      margin-top: 12.85714rem
+      margin-top: 18.85714rem
       margin-bottom: 7.785714rem
       max-width: 32rem
     &__title  
-      margin-bottom: 4rem
+      width: 100%
+      margin-right: 0
+      max-width: 29rem
+      margin: auto
   // container для изображений слайдера внутри swiper-slide
   .other
     &__wrapper
@@ -336,14 +340,14 @@
       margin-bottom: 10rem 
   .about
     &__block  
-      // margin: auto
+      margin: auto
       margin-bottom: 4rem
-      max-width: 20.83333rem
+      max-width: 27.83333rem
     &__title
       margin-bottom: 4rem
-      max-width: 17.83333rem
+      max-width: 25.83333rem
     &__text
-      max-width: 17.5rem
+      max-width: 23.5rem
   .more
     &__promo
       max-width: 30rem
@@ -778,7 +782,7 @@
     &__container
       max-width: 360px
       width: 100%
-      margin-bottom: 15rem
+      margin-bottom: 10rem
     &__menu
       max-width: 25rem
       flex-direction: column
@@ -829,11 +833,19 @@
     top: 6rem
   // слайдер доделать обязательно 27,06
   //  reviews
+  .reviews
+    &__container
+      flex-direction: column
+    &__user
+      max-width: 16rem
+  .user
+    &__text
+      min-width: 16.5rem
   .cards
     &__wrapper
       flex-direction: column
       margin: auto
-      max-width: 5rem
+      max-width: 22rem
   // promo with second slider
   .promo
     &__content
