@@ -1,5 +1,5 @@
 $(document).ready(function () {
-  ("use strict");
+  "use strict";
 
   let modal = $(".modal"),
     closeBtn = $(".modal__button");
@@ -149,7 +149,7 @@ $(document).ready(function () {
     let frame = $(".frame__first");
     console.log(frame);
     if (firstBtn) {
-      frame.css({ position: "unset" });
+      frame.css({ position: "unset" }).append(block);
       firstBtn.css({ display: "none" });
     }
   });
@@ -158,7 +158,7 @@ $(document).ready(function () {
     let frame = $(".frame__second");
     console.log(frame);
     if (secondBtn) {
-      frame.css({ position: "unset" });
+      frame.css({ position: "unset" }).append(block);
       secondBtn.css({ display: "none" });
     }
   });
@@ -167,7 +167,7 @@ $(document).ready(function () {
     let frame = $(".frame__third");
     console.log(frame);
     if (thirdBtn) {
-      frame.css({ position: "unset" });
+      frame.css({ position: "unset" }).append(block);
       thirdBtn.css({ display: "none" });
     }
   });
@@ -176,7 +176,7 @@ $(document).ready(function () {
     let frame = $(".frame__fourth");
     console.log(frame);
     if (fourthBtn) {
-      frame.css({ position: "unset" });
+      frame.css({ position: "unset" }).append(block);
       fourthBtn.css({ display: "none" });
     }
   });
@@ -266,4 +266,35 @@ $(document).ready(function () {
       videoText.style.display = "none";
     }
   });
+// lazyload
+  let block = document.createElement("iframe");
+  block.setAttribute(
+    "src",
+    "https://www.youtube.com/embed/BkGFhBypWrc",
+    "allow",
+    "accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture",
+    "allowfullscreen"
+  );
+
+  // console.log(block);
+  let frame = document.querySelector(".frame");
+  let btnVideo = document.querySelector(".slider__btn");
+
+  btnVideo.addEventListener("click", startLazyBlock);
+  
+  function startLazyBlock() {
+    if (!frameLoaded) {
+      let block = document.createElement("iframe");
+      block.setAttribute(
+        "src",
+        "https://www.youtube.com/embed/BkGFhBypWrc",
+        "allow",
+        "accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture",
+        "allowfullscreen"
+      );
+      
+      frameLoaded = true;
+      console.log(block);
+    }
+  }
 });
