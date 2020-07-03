@@ -1,18 +1,19 @@
 @media screen and ( max-width: 1920px )
-  .menu
+  .nav
     &__item
       position: relative
-      &::after
+      &:after
+        content: ""
         display: block
         position: absolute
+        width: 0
         left: 0
         bottom: -18px
         height: 2px
         background-color: $primary
-        content: ""
         transition: width 0.3s ease
-      &:hover::after
-        transition: width 0.3s ease
+      &:hover::after,
+      &:focus::after
         width: 100%
   .other
     &__wrapper
@@ -1334,4 +1335,8 @@
       max-width: 22rem
       font-size: 1.2
       font-weight: bold
+@media screen and ( max-height: 320px )
+  .button
+    &-top  
+      top: 21rem
  

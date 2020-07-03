@@ -452,8 +452,6 @@ ul > li {
   color: #dddddd; }
   .nav__item:last-child {
     margin-right: 0; }
-  .nav__item:hover {
-    color: #ffffff; }
 
 .video__content {
   position: relative;
@@ -1605,19 +1603,19 @@ span.invalid {
     outline-color: #ffffff; }
 
 @media screen and (max-width: 1920px) {
-  .menu__item {
+  .nav__item {
     position: relative; }
-    .menu__item::after {
+    .nav__item:after {
+      content: "";
       display: block;
       position: absolute;
+      width: 0;
       left: 0;
       bottom: -18px;
       height: 2px;
       background-color: #dddddd;
-      content: "";
       transition: width 0.3s ease; }
-    .menu__item:hover::after {
-      transition: width 0.3s ease;
+    .nav__item:hover::after, .nav__item:focus::after {
       width: 100%; }
   .other__wrapper {
     position: relative;
@@ -2506,7 +2504,8 @@ span.invalid {
   .socials__icon-box:last-child {
     margin-right: 0; }
   .rights__message {
-    margin-right: 0; }
+    margin-right: 0;
+    max-width: 15rem; }
   .button-top {
     position: fixed;
     top: 42rem;
@@ -2783,3 +2782,7 @@ span.invalid {
       max-width: 22rem;
       font-size: 1.2;
       font-weight: bold; } }
+
+@media screen and (max-height: 320px) {
+  .button-top {
+    top: 21rem; } }
